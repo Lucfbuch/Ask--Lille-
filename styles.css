@@ -177,7 +177,7 @@ a.kort:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(20,51,60,.10
 }
 .ferry-board a.book:hover{background:#fff}
 
-/* Tidslinje (dagsprogram) */
+/* Tidslinje (dagsprogram / historie) */
 .tidslinje{border-left:2px solid var(--linje);margin-left:8px;padding-left:32px;max-width:640px}
 .stop{position:relative;padding-bottom:36px}
 .stop:last-child{padding-bottom:0}
@@ -249,3 +249,43 @@ footer a:hover{color:#fff}
 @media(max-width:760px){.foot-grid{grid-template-columns:1fr}}
 
 :focus-visible{outline:2px solid var(--aeble);outline-offset:3px;border-radius:4px}
+
+/* ---------- HISTORIE / TIDSLINJE ---------- */
+.historie-intro{max-width:62ch}
+.aera-label{
+  font-family:'IBM Plex Mono';font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tang);margin:56px 0 22px;display:flex;align-items:center;gap:12px;
+}
+.aera-label:first-of-type{margin-top:0}
+.aera-label::after{content:"";flex:1;height:1px;background:var(--linje)}
+.moerk .aera-label{color:var(--blomst)}
+.moerk .aera-label::after{background:rgba(232,240,236,.18)}
+
+.historie-scroll{position:relative}
+.historie-rail{position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--linje);z-index:0}
+.historie-rail-fyld{position:absolute;top:0;left:0;width:100%;height:0;background:var(--aeble);transition:height .08s linear}
+.moerk .historie-rail{background:rgba(232,240,236,.18)}
+.historie-indhold{position:relative;z-index:1}
+.historie-indhold .tidslinje{border-left:none}
+
+.aar-stop{position:relative;padding-bottom:40px;max-width:640px}
+.aar-stop:last-child{padding-bottom:0}
+.aar-stop::before{
+  content:"";position:absolute;left:-40px;top:6px;width:14px;height:14px;
+  border-radius:50%;background:var(--soeglas);border:3px solid var(--aeble);z-index:2;
+}
+.moerk .aar-stop::before{background:var(--hav)}
+.aar-stop .aar{
+  font-family:'IBM Plex Mono';font-size:20px;font-weight:500;color:var(--aeble);
+  display:block;margin-bottom:6px;letter-spacing:-.01em;
+}
+.moerk .aar-stop .aar{color:var(--blomst)}
+.aar-stop h3{font-size:20px;margin-bottom:6px}
+.aar-stop p{font-size:15px;color:var(--graa);max-width:54ch}
+.moerk .aar-stop p{color:rgba(232,240,236,.75)}
+
+.aar-stop.nu{
+  background:var(--skum);border:1px solid var(--linje);border-radius:14px;
+  padding:24px 24px 24px 32px;margin-left:-32px;
+}
+.aar-stop.nu::before{left:-8px}
