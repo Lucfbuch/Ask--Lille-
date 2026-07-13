@@ -4,211 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Askø & Lilleø — Smålandshavets perler</title>
+<meta name="description" content="Askø og Lilleø i Smålandshavet: færge fra Bandholm, æbleplantager, marsvin og ø-liv. Officiel side fra Askø/Lilleø Beboerforening.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --hav:#14333C;        /* dybt sund-blågrøn */
-    --hav-dyb:#0C2229;
-    --soeglas:#EFF3F0;    /* kølig lys baggrund */
-    --skum:#FFFFFF;
-    --aeble:#C13B2A;      /* Lilleø-æble, bruges sparsomt */
-    --blomst:#E9C3BC;     /* æbleblomst */
-    --tang:#4E6E5D;
-    --blaek:#1B2A2E;
-    --linje:rgba(20,51,60,.14);
-    --maxw:1140px;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto}
-    *,*::before,*::after{animation:none!important;transition:none!important}
-  }
-  body{
-    font-family:'Inter',system-ui,sans-serif;
-    color:var(--blaek);
-    background:var(--soeglas);
-    line-height:1.6;
-    font-size:16px;
-  }
-  h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.05;font-weight:600}
-  .mono{font-family:'IBM Plex Mono',monospace}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-  a{color:inherit}
-
-  /* ---------- NAV ---------- */
-  nav{
-    position:sticky;top:0;z-index:50;
-    background:rgba(239,243,240,.85);backdrop-filter:blur(12px);
-    border-bottom:1px solid var(--linje);
-  }
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .brand{font-family:'Bricolage Grotesque';font-weight:700;font-size:18px;letter-spacing:-.02em;text-decoration:none}
-  .brand span{color:var(--aeble)}
-  .nav-links{display:flex;gap:28px;list-style:none;font-size:14px;font-weight:500}
-  .nav-links a{text-decoration:none;opacity:.75;transition:opacity .15s}
-  .nav-links a:hover,.nav-links a:focus-visible{opacity:1}
-  .nav-cta{
-    font-size:13px;font-weight:600;text-decoration:none;
-    background:var(--hav);color:var(--skum);
-    padding:9px 16px;border-radius:999px;transition:background .15s;
-  }
-  .nav-cta:hover{background:var(--hav-dyb)}
-  @media(max-width:760px){.nav-links{display:none}}
-
-  /* ---------- HERO ---------- */
-  header.hero{
-    background:linear-gradient(180deg,#DCE9E4 0%, var(--soeglas) 70%);
-    padding:88px 0 0;
-    overflow:hidden;
-  }
-  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end}
-  .eyebrow{
-    font-family:'IBM Plex Mono';font-size:12px;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--tang);margin-bottom:20px;
-  }
-  h1{font-size:clamp(44px,7vw,84px);letter-spacing:-.03em;margin-bottom:24px}
-  h1 em{font-style:normal;color:var(--aeble)}
-  .hero-lede{font-size:19px;max-width:46ch;color:#3A4A4E;margin-bottom:36px}
-  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:56px}
-  .btn{
-    display:inline-block;text-decoration:none;font-weight:600;font-size:15px;
-    padding:14px 26px;border-radius:999px;transition:transform .15s, background .15s;
-  }
-  .btn-primary{background:var(--aeble);color:#fff}
-  .btn-primary:hover{background:#A5301F;transform:translateY(-1px)}
-  .btn-ghost{border:1.5px solid var(--hav);color:var(--hav)}
-  .btn-ghost:hover{background:var(--hav);color:#fff}
-
-  /* færgetavle */
-  .ferry-board{
-    background:var(--hav);color:#E8F0EC;border-radius:16px 16px 0 0;
-    padding:26px 26px 30px;box-shadow:0 20px 60px rgba(12,34,41,.25);
-  }
-  .ferry-board h3{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-family:'IBM Plex Mono';font-weight:500;opacity:.7;margin-bottom:16px}
-  .ferry-row{
-    display:flex;justify-content:space-between;align-items:baseline;
-    padding:10px 0;border-bottom:1px dashed rgba(232,240,236,.2);
-    font-family:'IBM Plex Mono';font-size:14px;
-  }
-  .ferry-row:last-of-type{border-bottom:none}
-  .ferry-row .tid{font-size:17px;font-weight:500}
-  .ferry-note{font-size:12px;opacity:.55;margin-top:14px;font-family:'Inter'}
-  .ferry-board a.book{
-    display:block;text-align:center;margin-top:18px;text-decoration:none;
-    background:#E8F0EC;color:var(--hav);font-weight:600;font-size:14px;
-    padding:12px;border-radius:10px;transition:background .15s;
-  }
-  .ferry-board a.book:hover{background:#fff}
-
-  /* horisont-signatur */
-  .horizon{display:block;width:100%;margin-top:-2px}
-  @media(max-width:860px){
-    .hero-grid{grid-template-columns:1fr}
-    .ferry-board{border-radius:16px;margin-bottom:40px}
-  }
-
-  /* ---------- SEKTIONER ---------- */
-  section{padding:96px 0}
-  .sek-label{
-    font-family:'IBM Plex Mono';font-size:12px;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--tang);margin-bottom:14px;
-  }
-  h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.02em;margin-bottom:18px;max-width:20ch}
-  .sek-lede{font-size:17px;color:#3A4A4E;max-width:60ch;margin-bottom:48px}
-
-  /* Tre indgange */
-  .indgange{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .kort{
-    background:var(--skum);border:1px solid var(--linje);border-radius:18px;
-    padding:32px 28px;text-decoration:none;display:block;
-    transition:transform .18s, box-shadow .18s;
-  }
-  .kort:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(20,51,60,.10)}
-  .kort .ikon{font-size:26px;margin-bottom:18px;display:block}
-  .kort h3{font-size:21px;margin-bottom:10px}
-  .kort p{font-size:14.5px;color:#4A5A5E;margin-bottom:16px}
-  .kort .pil{font-family:'IBM Plex Mono';font-size:13px;color:var(--aeble);font-weight:500}
-  @media(max-width:760px){.indgange{grid-template-columns:1fr}}
-
-  /* Årstider / naturen */
-  .natur{background:var(--hav);color:#E8F0EC}
-  .natur .sek-label{color:var(--blomst)}
-  .natur h2{color:#fff}
-  .natur .sek-lede{color:rgba(232,240,236,.75)}
-  .aarstider{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(232,240,236,.15);border-radius:16px;overflow:hidden}
-  .aarstid{background:var(--hav);padding:30px 24px}
-  .aarstid .mono{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--blomst);display:block;margin-bottom:12px}
-  .aarstid h3{font-size:19px;margin-bottom:8px;color:#fff}
-  .aarstid p{font-size:14px;color:rgba(232,240,236,.7)}
-  @media(max-width:860px){.aarstider{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:520px){.aarstider{grid-template-columns:1fr}}
-
-  /* Praktisk grid */
-  .praktisk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-  .p-kort{
-    background:var(--skum);border:1px solid var(--linje);border-radius:14px;
-    padding:22px 20px;text-decoration:none;transition:border-color .15s;
-  }
-  .p-kort:hover{border-color:var(--hav)}
-  .p-kort .mono{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--tang);display:block;margin-bottom:8px}
-  .p-kort strong{font-size:15px;display:block;margin-bottom:4px}
-  .p-kort span{font-size:13px;color:#5A6A6E}
-  @media(max-width:860px){.praktisk-grid{grid-template-columns:repeat(2,1fr)}}
-
-  /* Kalender */
-  .events{border-top:1px solid var(--linje)}
-  .event{
-    display:grid;grid-template-columns:120px 1fr auto;gap:24px;align-items:baseline;
-    padding:22px 0;border-bottom:1px solid var(--linje);
-  }
-  .event .dato{font-family:'IBM Plex Mono';font-size:14px;color:var(--aeble);font-weight:500}
-  .event h3{font-size:19px}
-  .event p{font-size:14px;color:#5A6A6E;margin-top:2px}
-  .event .sted{font-family:'IBM Plex Mono';font-size:12px;color:var(--tang);white-space:nowrap}
-  @media(max-width:640px){.event{grid-template-columns:1fr}.event .sted{display:none}}
-
-  /* Footer */
-  footer{background:var(--hav-dyb);color:rgba(232,240,236,.7);padding:64px 0 40px;font-size:14px}
-  footer .brand{color:#fff;font-size:20px;display:block;margin-bottom:8px}
-  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:48px}
-  footer h4{color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-family:'IBM Plex Mono';font-weight:500;margin-bottom:14px}
-  footer ul{list-style:none}
-  footer li{margin-bottom:8px}
-  footer a{text-decoration:none;transition:color .15s}
-  footer a:hover{color:#fff}
-  .foot-bund{border-top:1px solid rgba(232,240,236,.12);padding-top:24px;font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-  @media(max-width:760px){.foot-grid{grid-template-columns:1fr}}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav>
+<nav class="top">
   <div class="wrap nav-inner">
-    <a class="brand" href="#">Askø <span>&</span> Lilleø</a>
+    <a class="brand" href="index.html">Askø <span>&</span> Lilleø</a>
+    <button class="burger" aria-label="Menu" aria-expanded="false">☰</button>
     <ul class="nav-links">
-      <li><a href="#turist">Turist</a></li>
-      <li><a href="#natur">Naturen</a></li>
-      <li><a href="#praktisk">Praktisk</a></li>
-      <li><a href="#kalender">Kalender</a></li>
+      <li><a href="turist.html">Turist</a></li>
+      <li><a href="oebo.html">Øbo</a></li>
+      <li><a href="oe-liv.html">Ø-liv</a></li>
+      <li><a href="kalender.html">Kalender</a></li>
     </ul>
     <a class="nav-cta" href="https://lolland-ferry.teambooking.dk/new-booking?lang=da-DK">Book færgen</a>
   </div>
 </nav>
 
 <header class="hero">
-  <div class="wrap hero-grid">
+  <div class="wrap" style="display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end" id="hero-grid">
     <div>
       <p class="eyebrow">Smålandshavet · 55.9° N</p>
       <h1>To øer.<br>Én dæmning.<br><em>Ingen travlhed.</em></h1>
-      <p class="hero-lede">Askø og Lilleø ligger en halv times sejlads fra Bandholm. Cykl begge øer rundt på en eftermiddag, pluk æbler i Danmarks måske bedste plantager — og hold øje med marsvinene, der tit følger færgen.</p>
+      <p class="hero-lede">Askø og Lilleø ligger en halv times sejlads fra Bandholm. Cykl begge øer rundt på en eftermiddag, pluk æbler i plantagerne — og hold øje med marsvinene, der tit følger færgen.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#turist">Planlæg dit besøg</a>
+        <a class="btn btn-primary" href="turist.html">Planlæg dit besøg</a>
         <a class="btn btn-ghost" href="#natur">Se øerne</a>
       </div>
     </div>
-    <aside class="ferry-board" aria-label="Færgeafgange">
+    <aside class="ferry-board" aria-label="Færgeafgange" style="border-radius:16px 16px 0 0">
       <h3>Færgen · Bandholm ⇄ Askø</h3>
       <div class="ferry-row"><span>Bandholm afg.</span><span class="tid">07:00</span></div>
       <div class="ferry-row"><span>Askø afg.</span><span class="tid">07:35</span></div>
@@ -218,32 +46,42 @@
       <a class="book" href="https://lolland-ferry.teambooking.dk/new-booking?lang=da-DK">Book plads på færgen →</a>
     </aside>
   </div>
-  <!-- Signatur: horisontlinjen — de flade øer set fra sundet -->
   <svg class="horizon" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
     <path d="M0,90 L180,90 C240,90 260,74 340,72 C420,70 460,64 540,66 C600,67 640,80 700,82 L760,84 C790,85 810,88 840,88 L900,88 C960,88 990,70 1060,68 C1130,66 1170,60 1240,64 C1300,67 1340,82 1440,84 L1440,120 L0,120 Z" fill="#14333C"/>
     <path d="M0,98 L1440,96 L1440,120 L0,120 Z" fill="#0C2229" opacity=".6"/>
   </svg>
 </header>
 
-<section id="turist">
+<section class="tight">
+  <div class="wrap reveal">
+    <div class="stats">
+      <div class="stat"><span class="tal">2</span><span class="tekst">øer forbundet af én dæmning</span></div>
+      <div class="stat"><span class="tal">~30</span><span class="tekst">minutters overfart fra Bandholm</span></div>
+      <div class="stat"><span class="tal">1</span><span class="tekst">købmand drevet af frivillige</span></div>
+      <div class="stat"><span class="tal">∞</span><span class="tekst">bænke med vandudsigt</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="indgange" style="padding-top:24px">
   <div class="wrap">
-    <p class="sek-label">Tre indgange</p>
-    <h2>Hvem er du på øen?</h2>
-    <p class="sek-lede">Siden her samler alt fra Askø/Lilleø Beboerforening — hvad enten du kommer for en dag, et sommerhus eller hele livet.</p>
-    <div class="indgange">
-      <a class="kort" href="#">
+    <p class="sek-label reveal">Tre indgange</p>
+    <h2 class="reveal">Hvem er du på øen?</h2>
+    <p class="sek-lede reveal">Siden her samles af Askø/Lilleø Beboerforening — hvad enten du kommer for en dag, et sommerhus eller hele livet.</p>
+    <div class="grid-3">
+      <a class="kort reveal" href="turist.html">
         <span class="ikon">⛴</span>
         <h3>Turist</h3>
-        <p>Endagstur eller weekend? Kort over seværdigheder, kajak- og cykelruter, museet og den lille kirke med den gotiske altertavle.</p>
+        <p>Endagstur eller weekend? Dagsprogram, kort over seværdigheder, kajak- og cykelruter, museet og kirken.</p>
         <span class="pil">Planlæg besøget →</span>
       </a>
-      <a class="kort" href="#">
+      <a class="kort reveal" href="oebo.html">
         <span class="ikon">🏡</span>
         <h3>Øbo & fritidsbeboer</h3>
-        <p>Praktisk information for helårs- og sommerhusbeboere — fra affald og vand til nyhedsmail og grunde til salg.</p>
+        <p>Praktisk information for helårs- og sommerhusbeboere — fra færgekort og nyhedsmail til grunde til salg.</p>
         <span class="pil">Til beboersiderne →</span>
       </a>
-      <a class="kort" href="#">
+      <a class="kort reveal" href="oe-liv.html">
         <span class="ikon">🍎</span>
         <h3>Ø-liv & foreninger</h3>
         <p>Beboerforeningen, fællesarrangementer, frivillige hos købmanden og alt det, der får to små øer til at hænge sammen.</p>
@@ -253,12 +91,12 @@
   </div>
 </section>
 
-<section class="natur" id="natur">
+<section class="moerk" id="natur">
   <div class="wrap">
-    <p class="sek-label">Naturen · året rundt</p>
-    <h2>Vandudsigt, charme og ekstra lys — overalt</h2>
-    <p class="sek-lede">Flade strandenge med vadefugle, rovfugle over markerne, marsvin ved færgen og sæler i havnen. Øerne skifter karakter med årstiden — og de er aldrig ens to besøg i træk.</p>
-    <div class="aarstider">
+    <p class="sek-label reveal">Naturen · året rundt</p>
+    <h2 class="reveal">Vandudsigt, charme og ekstra lys — overalt</h2>
+    <p class="sek-lede reveal">Flade strandenge med vadefugle, rovfugle over markerne, marsvin ved færgen og sæler i havnen. Øerne skifter karakter med årstiden — og de er aldrig ens to besøg i træk.</p>
+    <div class="aarstider reveal">
       <div class="aarstid">
         <span class="mono">Forår</span>
         <h3>Æbleblomstring</h3>
@@ -272,7 +110,7 @@
       <div class="aarstid">
         <span class="mono">Efterår</span>
         <h3>Æblepluk & havtorn</h3>
-        <p>Vilde brombær, hyld og havtorn — og gratis æblepluk i Madegård frugtplantage, når sæsonen tillader det.</p>
+        <p>Vilde brombær, hyld og havtorn — og æblepluk i frugtplantagerne, når sæsonen tillader det.</p>
       </div>
       <div class="aarstid">
         <span class="mono">Vinter</span>
@@ -285,84 +123,72 @@
 
 <section id="praktisk">
   <div class="wrap">
-    <p class="sek-label">Praktisk</p>
-    <h2>Alt det, du skal bruge</h2>
-    <p class="sek-lede">Fra færgebilletten til købmandens kagebord — de vigtigste links samlet ét sted.</p>
-    <div class="praktisk-grid">
-      <a class="p-kort" href="https://lolland-ferry.teambooking.dk/new-booking?lang=da-DK">
-        <span class="mono">Transport</span>
-        <strong>Book færgen</strong>
-        <span>Reservér plads Bandholm ⇄ Askø</span>
+    <p class="sek-label reveal">Praktisk</p>
+    <h2 class="reveal">Alt det, du skal bruge</h2>
+    <p class="sek-lede reveal">Fra færgebilletten til købmandens kagebord — de vigtigste links samlet ét sted.</p>
+    <div class="grid-4">
+      <a class="p-kort reveal" href="https://lolland-ferry.teambooking.dk/new-booking?lang=da-DK">
+        <span class="mono">Transport</span><strong>Book færgen</strong><span>Reservér plads Bandholm ⇄ Askø</span>
       </a>
-      <a class="p-kort" href="http://www.askoe-koebmand.dk">
-        <span class="mono">Indkøb</span>
-        <strong>Købmanden</strong>
-        <span>Åbningstider, lokale varer, kaffe & kage</span>
+      <a class="p-kort reveal" href="http://www.askoe-koebmand.dk">
+        <span class="mono">Indkøb</span><strong>Købmanden</strong><span>Åbningstider, lokale varer, kaffe & kage</span>
       </a>
-      <a class="p-kort" href="#">
-        <span class="mono">Oplev</span>
-        <strong>Kort over øerne</strong>
-        <span>Seværdigheder, stier og bænke med udsigt</span>
+      <a class="p-kort reveal" href="turist.html#kort">
+        <span class="mono">Oplev</span><strong>Kort over øerne</strong><span>Seværdigheder, stier og bænke med udsigt</span>
       </a>
-      <a class="p-kort" href="https://askø-museum.dk">
-        <span class="mono">Historie</span>
-        <strong>Askø Museum</strong>
-        <span>Svundne tider på Smålandshavets perler</span>
+      <a class="p-kort reveal" href="https://askø-museum.dk">
+        <span class="mono">Historie</span><strong>Askø Museum</strong><span>Svundne tider på Smålandshavets perler</span>
       </a>
-      <a class="p-kort" href="#">
-        <span class="mono">Vandring</span>
-        <strong>Askø Kirkesti</strong>
-        <span>Spor i Landskabet — afmærket rute</span>
+      <a class="p-kort reveal" href="turist.html#sevaerdigheder">
+        <span class="mono">Vandring</span><strong>Askø Kirkesti</strong><span>Spor i Landskabet — afmærket rute</span>
       </a>
-      <a class="p-kort" href="#">
-        <span class="mono">Galleri</span>
-        <strong>Film & billeder</strong>
-        <span>Se øerne fra luften og gennem året</span>
+      <a class="p-kort reveal" href="oe-liv.html#facebook">
+        <span class="mono">Fællesskab</span><strong>Facebook-grupper</strong><span>Følg med i øernes grupper</span>
       </a>
-      <a class="p-kort" href="https://www.boliga.dk/resultat?zipCodes=4942">
-        <span class="mono">Flyt hertil</span>
-        <strong>Til salg</strong>
-        <span>Grunde og ejendomme på 4942 Askø</span>
+      <a class="p-kort reveal" href="https://www.boliga.dk/resultat?zipCodes=4942">
+        <span class="mono">Flyt hertil</span><strong>Til salg</strong><span>Grunde og ejendomme på 4942 Askø</span>
       </a>
-      <a class="p-kort" href="#">
-        <span class="mono">Hold kontakt</span>
-        <strong>Nyhedsmail</strong>
-        <span>Få nyt fra beboerforeningen direkte</span>
+      <a class="p-kort reveal" href="oebo.html#nyhedsmail">
+        <span class="mono">Hold kontakt</span><strong>Nyhedsmail</strong><span>Få nyt fra beboerforeningen direkte</span>
       </a>
     </div>
   </div>
 </section>
 
-<section id="kalender">
+<section class="tight" id="kalender-teaser">
   <div class="wrap">
-    <p class="sek-label">Kalender</p>
-    <h2>Det sker på øerne</h2>
-    <p class="sek-lede">Arrangementer fra beboerforeningen og øens frivillige.</p>
-    <div class="events">
+    <p class="sek-label reveal">Kalender</p>
+    <h2 class="reveal">Det sker på øerne</h2>
+    <p class="sek-lede reveal">Et udpluk — se hele kalenderen for alle arrangementer.</p>
+    <div class="events reveal">
       <div class="event">
         <span class="dato">10. AUG</span>
-        <div>
-          <h3>Beboerforeningens sommerudflugt</h3>
-          <p>Årets fælles udflugt for øboere og fritidsbeboere.</p>
-        </div>
+        <div><h3>Beboerforeningens sommerudflugt</h3><p>Årets fælles udflugt for øboere og fritidsbeboere.</p></div>
         <span class="sted">Askø Havn</span>
       </div>
       <div class="event">
         <span class="dato">OKT</span>
-        <div>
-          <h3>Gratis æblepluk</h3>
-          <p>Pluk selv i Madegård frugtplantage — og lav din egen æblemost bagefter.</p>
-        </div>
-        <span class="sted">Madegård, Konemadevej 16</span>
+        <div><h3>Æblepluk i plantagen</h3><p>Pluk selv — og lav din egen æblemost bagefter.</p></div>
+        <span class="sted">Madegård</span>
       </div>
       <div class="event">
         <span class="dato">DEC</span>
-        <div>
-          <h3>Julebanko</h3>
-          <p>Traditionen tro på Askø Skole. Fine gevinster, ænder og amerikansk lotteri.</p>
-        </div>
+        <div><h3>Julebanko</h3><p>Traditionen tro på Askø Skole. Fine gevinster og amerikansk lotteri.</p></div>
         <span class="sted">Askø Skole</span>
       </div>
+    </div>
+    <p style="margin-top:28px" class="reveal"><a class="btn btn-ghost" href="kalender.html">Se hele kalenderen</a></p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap reveal">
+    <div class="cta-banner">
+      <div>
+        <h2>Og vi elsker turister</h2>
+        <p>Kom over vandet — marsvinene følger tit med færgen, og kaffen står klar hos købmanden.</p>
+      </div>
+      <a class="btn" href="turist.html">Planlæg din tur</a>
     </div>
   </div>
 </section>
@@ -371,25 +197,25 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="#">Askø & Lilleø</a>
+        <a class="brand" href="index.html">Askø & Lilleø</a>
         <p>Udgivet af Askø/Lilleø Beboerforening.<br>Smålandshavets perler — og vi elsker turister.</p>
       </div>
       <div>
-        <h4>Indhold</h4>
+        <h4>Sider</h4>
         <ul>
-          <li><a href="#turist">Turist</a></li>
-          <li><a href="#natur">Naturen</a></li>
-          <li><a href="#praktisk">Praktisk</a></li>
-          <li><a href="#kalender">Kalender</a></li>
+          <li><a href="turist.html">Turist</a></li>
+          <li><a href="oebo.html">Øbo & fritidsbeboer</a></li>
+          <li><a href="oe-liv.html">Ø-liv & foreninger</a></li>
+          <li><a href="kalender.html">Kalender</a></li>
         </ul>
       </div>
       <div>
         <h4>Følg med</h4>
         <ul>
-          <li><a href="#">Facebook-grupper</a></li>
-          <li><a href="#">Nyhedsmail</a></li>
+          <li><a href="oe-liv.html#facebook">Facebook-grupper</a></li>
+          <li><a href="oebo.html#nyhedsmail">Nyhedsmail</a></li>
           <li><a href="https://danske-smaaoer.dk">Danske Småøer</a></li>
-          <li><a href="#">Æbleøerne</a></li>
+          <li><a href="https://æbleøerne.dk">Æbleøerne</a></li>
         </ul>
       </div>
     </div>
@@ -400,5 +226,7 @@
   </div>
 </footer>
 
+<style>@media(max-width:860px){#hero-grid{grid-template-columns:1fr!important}#hero-grid .ferry-board{border-radius:16px!important;margin-bottom:40px}}</style>
+<script src="script.js"></script>
 </body>
 </html>
