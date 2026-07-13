@@ -220,6 +220,19 @@ a.kort:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(20,51,60,.10
 .foto-tekst{font-size:13px;color:var(--graa);margin-top:12px}
 .moerk .foto-tekst{color:rgba(232,240,236,.6)}
 
+.foto-annoteret{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:0 16px 50px rgba(20,51,60,.10);line-height:0}
+.foto-annoteret img{width:100%;display:block}
+.foto-tag{
+  position:absolute;transform:translate(-50%,-50%);
+  display:flex;align-items:center;gap:6px;
+  background:rgba(12,34,41,.82);backdrop-filter:blur(2px);
+  color:#fff;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;
+  padding:6px 12px 6px 10px;border-radius:999px;white-space:nowrap;
+  box-shadow:0 4px 14px rgba(0,0,0,.25);line-height:1.2;
+}
+.foto-tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--aeble);flex:none}
+@media(max-width:640px){.foto-tag{font-size:10px;padding:5px 9px 5px 7px}.foto-tag::before{width:5px;height:5px}}
+
 /* Kort-iframe */
 .kortramme{
   border:1px solid var(--linje);border-radius:var(--radius);overflow:hidden;
