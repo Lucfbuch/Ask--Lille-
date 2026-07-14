@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sejlere · Askø & Lilleø</title>
-<meta name="description" content="Askø Havn for gæstesejlere: 60 bådpladser, det nybyggede havnehus, gratis mastekran, cykeludlejning og alt det praktiske, du skal vide, før du lægger til.">
+<meta name="description" content="Interaktivt kort over Askø Havn. Tryk på et punkt og se billeder fra havnen.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=2">
@@ -28,84 +28,9 @@
   </div>
 </nav>
 
-<header class="hero">
-  <div class="wrap" style="display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end" id="hero-grid">
-    <div>
-      <p class="brod"><a href="index.html">Forside</a> / Sejlere</p>
-      <p class="eyebrow">For gæstesejlere</p>
-      <h1>Læg til.<br><em>Bliv lidt længere.</em></h1>
-      <p class="hero-lede">Askø Havn ligger fredeligt for anker i Smålandshavet, med eget havnehus, gratis mastekran og cykler klar til at tage dig rundt på øen. Her er alt, du skal vide, før du lægger til.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#pladser">Se bådpladserne</a>
-        <a class="btn btn-ghost" href="#kontakt">Kontakt havnefogeden</a>
-      </div>
-    </div>
-    <aside class="ferry-board" aria-label="Havnefakta" style="border-radius:16px 16px 0 0">
-      <h3>Askø Havn · på et øjeblik</h3>
-      <div class="ferry-row"><span>Bådpladser i alt</span><span class="tid">60</span></div>
-      <div class="ferry-row"><span>Sejlbådspladser</span><span class="tid">17</span></div>
-      <div class="ferry-row"><span>Jolle- & bådpladser</span><span class="tid">43</span></div>
-      <div class="ferry-row"><span>Havnefoged</span><span class="tid">51 64 79 68</span></div>
-      <p class="ferry-note">Position ca. 54.8965° N, 11.5015° Ø. Havnehuset står åbent for alle tilsejlende gæster, ikke kun medlemmer.</p>
-      <a class="book" href="#havnekort">Se havnen på kort →</a>
-    </aside>
-  </div>
-  <svg class="horizon" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0,90 L180,90 C240,90 260,74 340,72 C420,70 460,64 540,66 C600,67 640,80 700,82 L760,84 C790,85 810,88 840,88 L900,88 C960,88 990,70 1060,68 C1130,66 1170,60 1240,64 C1300,67 1340,82 1440,84 L1440,120 L0,120 Z" fill="#14333C"/>
-    <path d="M0,98 L1440,96 L1440,120 L0,120 Z" fill="#0C2229" opacity=".6"/>
-  </svg>
-</header>
-
-<section class="tight">
-  <div class="wrap reveal">
-    <div class="foto-ramme">
-      <img src="images/havn-broer.jpg" alt="Askø Havn en sommerdag, med sejlbåde fortøjet langs broerne på begge sider" loading="lazy">
-    </div>
-    <p class="foto-tekst">Askø Havn set fra broen en sommerdag.</p>
-  </div>
-</section>
-
-<section class="tight">
-  <div class="wrap reveal">
-    <div class="stats">
-      <div class="stat"><span class="tal">60</span><span class="tekst">bådpladser i havnen</span></div>
-      <div class="stat"><span class="tal">17</span><span class="tekst">pladser til sejlbåde</span></div>
-      <div class="stat"><span class="tal">9m</span><span class="tekst">mastekran, løfter op til 300 kg</span></div>
-      <div class="stat"><span class="tal">Gratis</span><span class="tekst">ophalerplads og havnehus for gæster</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="moerk" id="havnehuset">
-  <div class="wrap">
-    <p class="sek-label reveal">Havnehuset</p>
-    <h2 class="reveal">Et hus bygget til at blive brugt</h2>
-    <p class="sek-lede reveal">Havnehuset blev opført i 2008-2009 og står åbent for alle tilsejlende gæster, ikke kun sejlklubbens medlemmer. Det er hjertet af havnen, når vejret er dårligt, eller når man bare skal have en kop kaffe og møde de andre både i havnen.</p>
-    <div class="foto-ramme reveal" style="margin-top:36px">
-      <img src="images/havnehuset.jpg" alt="Havnehuset set udefra med sejlbåd fortøjet ved broen" loading="lazy">
-    </div>
-    <div class="grid-3" style="margin-top:36px">
-      <div class="kort reveal" style="background:rgba(232,240,236,.06);border-color:rgba(232,240,236,.15)">
-        <span class="ikon">🍳</span>
-        <h3>Køkken & spisestue</h3>
-        <p style="color:rgba(232,240,236,.7)">Komfur, køle- og fryseskab, opvaskemaskine og spisepladser. Der er også bøger og legetøj, så ventetiden på vejret ikke bliver alt for lang.</p>
-      </div>
-      <div class="kort reveal" style="background:rgba(232,240,236,.06);border-color:rgba(232,240,236,.15)">
-        <span class="ikon">🚿</span>
-        <h3>Bad & vask</h3>
-        <p style="color:rgba(232,240,236,.7)">Toilet og handicaptoilet, bad med møntindkast (5 kr for 5 min. varmt vand) og vaskemaskine (2×20 kr). Husk at efterlade huset rengjort til næste gæst.</p>
-      </div>
-      <div class="kort reveal" style="background:rgba(232,240,236,.06);border-color:rgba(232,240,236,.15)">
-        <span class="ikon">📶</span>
-        <h3>Wifi & sikkerhed</h3>
-        <p style="color:rgba(232,240,236,.7)">Trådløst netværk dækker hele havnen. Der er hjertestarter i havnehuset, og teltplads og grillplads lige udenfor, hvis du hellere vil sove under åben himmel.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="havnekort">
   <div class="wrap">
+    <p class="brod reveal"><a href="index.html">Forside</a> / Sejlere</p>
     <p class="sek-label reveal">Havnen på kort</p>
     <h2 class="reveal">Sådan ligger tingene</h2>
     <p class="sek-lede reveal">Luftfoto af Askø Havn med de vigtigste faciliteter markeret. Ikke et søkort. Brug altid et opdateret søkort og havnelods til selve indsejlingen og dybgangsforhold.</p>
@@ -126,133 +51,6 @@
     </div>
     <p class="foto-tekst reveal">Askø Havn set fra luften. 17 sejlbådspladser og 43 jolle- &amp; bådpladser ligger i den lukkede bassin til venstre.</p>
     <p class="kort-note reveal">Ikke et søkort. Se det <a href="turist.html#kort">rigtige kort over øerne</a>, og brug altid officielt søkort til navigation.</p>
-  </div>
-</section>
-
-<section class="tight" id="pladser">
-  <div class="wrap">
-    <p class="sek-label reveal">Bådpladser</p>
-    <h2 class="reveal">60 pladser, to slags</h2>
-    <p class="sek-lede reveal">Askø Havn hører under Lolland Havne og har plads til både sejlbåde og mindre både/joller. Alle pladser har adgang til rent vand og strøm.</p>
-    <div class="grid-2">
-      <div class="kort reveal">
-        <span class="ikon">⛵</span>
-        <h3>Sejlbådspladser</h3>
-        <p>17 pladser til kølbåde langs den ene bro, med vand og strøm ved bådpladsen. Gratis ophalerplads og mastekran til rådighed.</p>
-      </div>
-      <div class="kort reveal">
-        <span class="ikon">🚣</span>
-        <h3>Jolle- & bådpladser</h3>
-        <p>43 pladser til mindre både og joller, perfekt til dagsture og kortere ophold. Flydebro for kano og kajak i tilknytning til havnen.</p>
-      </div>
-    </div>
-    <p class="kort-note reveal" style="margin-top:24px">Se <a href="https://lollandhavne.lolland.dk/lystbaadehavne/takster-og-regulativer">takster og regulativer for lystbådehavne i Lolland Kommune</a> for aktuelle priser og betalingsvilkår.</p>
-  </div>
-</section>
-
-<section class="moerk">
-  <div class="wrap">
-    <p class="sek-label reveal">Kom i land</p>
-    <h2 class="reveal">Lån en cykel og se resten af øen</h2>
-    <p class="sek-lede reveal">Askø og Lilleø er flade og små nok til at cykle rundt på en eftermiddag. Ved havnen kan du leje en cykel, selvbetjening med betalingsboks. Så er turen fri: kirken med den gotiske altertavle, Askø Museum, den afmærkede Askø Kirkesti og æbleplantagerne på Lilleø.</p>
-    <div class="grid-3" style="margin-top:44px">
-      <a class="kort reveal" href="turist.html" style="background:rgba(232,240,236,.06);border-color:rgba(232,240,236,.15)">
-        <span class="ikon">🗺</span>
-        <h3>Dagsprogrammet</h3>
-        <p style="color:rgba(232,240,236,.7)">Et forslag til, hvordan du bruger tiden i land, mens båden ligger trygt i havnen.</p>
-        <span class="pil" style="color:var(--blomst)">Se dagsprogrammet →</span>
-      </a>
-      <a class="kort reveal" href="turist.html#sevaerdigheder" style="background:rgba(232,240,236,.06);border-color:rgba(232,240,236,.15)">
-        <span class="ikon">⛪</span>
-        <h3>Seværdigheder</h3>
-        <p style="color:rgba(232,240,236,.7)">Kirken, museet, kirkestien og æbleplantagerne, alt sammen inden for cykelafstand fra havnen.</p>
-        <span class="pil" style="color:var(--blomst)">Se listen →</span>
-      </a>
-      <a class="kort reveal" href="http://www.askoe-koebmand.dk" style="background:rgba(232,240,236,.06);border-color:rgba(232,240,236,.15)">
-        <span class="ikon">☕</span>
-        <h3>Købmanden</h3>
-        <p style="color:rgba(232,240,236,.7)">Cirka 2 km fra havnen. Frivillige sælger kaffe, kage og lokale varer, og varer kan forudbestilles.</p>
-        <span class="pil" style="color:var(--blomst)">Åbningstider →</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <p class="sek-label reveal">Hvorfor lige Askø?</p>
-    <h2 class="reveal">En stille havn midt i Smålandshavet</h2>
-    <div class="aarstider reveal">
-      <div class="aarstid">
-        <span class="mono">Ro</span>
-        <h3>Lunt og roligt</h3>
-        <p>Havnen ligger beskyttet på Askøs sydspids, et roligt sted at lægge til efter en dag på vandet.</p>
-      </div>
-      <div class="aarstid">
-        <span class="mono">Natur</span>
-        <h3>Marsvin & sæler</h3>
-        <p>Hold øje med vandet: marsvin ses ofte omkring øerne, og sælerne hviler sig gerne i selve havnen.</p>
-      </div>
-      <div class="aarstid">
-        <span class="mono">Øhop</span>
-        <h3>Midt i øhavet</h3>
-        <p>Askø og Lilleø ligger i hjertet af Smålandsfarvandet med Fejø og Femø som nære naboer, oplagt at lægge ind på ruten.</p>
-      </div>
-      <div class="aarstid">
-        <span class="mono">Sæson</span>
-        <h3>Æbleblomstring</h3>
-        <p>Kommer du forbi i maj, blomstrer æbleplantagerne på Lilleø, synligt helt fra vandet på en klar dag.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="tight">
-  <div class="wrap">
-    <p class="sek-label reveal">Praktisk & kontakt</p>
-    <h2 class="reveal">Godt at vide før du lægger til</h2>
-    <div class="info-liste" id="kontakt">
-      <div class="info-punkt reveal">
-        <h3>Hvordan betaler jeg for pladsen?</h3>
-        <p>Se det aktuelle <a href="https://lollandhavne.lolland.dk/lystbaadehavne/takster-og-regulativer">takstblad for lystbådehavne i Lolland Kommune</a>, eller spørg havnefogeden ved ankomst.</p>
-      </div>
-      <div class="info-punkt reveal">
-        <h3>Hvem kontakter jeg ved spørgsmål eller problemer?</h3>
-        <p>Askø Sejlklub har varetaget havnefogedfunktionen siden 2013. Havnefogeden kan kontaktes på mobil <a href="tel:+4551647968">51 64 79 68</a>. Bemærk at mobildækningen på øen ikke altid er optimal.</p>
-      </div>
-      <div class="info-punkt reveal">
-        <h3>Kan jeg få hjælp til at tage masten ned?</h3>
-        <p>Havnens mastekran er 9 meter høj med en udliggerarm på 6 meter og kan løfte op til 300 kg. Gratis for sejlklubbens medlemmer.</p>
-      </div>
-      <div class="info-punkt reveal">
-        <h3>Er der proviant i nærheden?</h3>
-        <p>Ja, <a href="http://www.askoe-koebmand.dk">Askø Købmand</a> ligger cirka 2 km fra havnen og tager gerne imod forudbestillinger på telefon eller e-mail.</p>
-      </div>
-      <div class="info-punkt reveal">
-        <h3>Deler jeg havn med passagerfærgen?</h3>
-        <p>Ja, Askø Havn bruges både af lystbåde og af passagerfærgen til Kragenæs, som har sit eget færgeleje i havnen. Hold godt udkig ved ind- og udsejling.</p>
-      </div>
-      <div class="info-punkt reveal">
-        <h3>Kan man svømme fra havnen?</h3>
-        <p>Ja, for enden af den østlige mole er der en badeplads, hvor du nemt kan hoppe direkte i vandet.</p>
-      </div>
-      <div class="info-punkt reveal">
-        <h3>Vil du blive medlem af Askø Sejlklub?</h3>
-        <p>Kontingent er 150 kr, gældende generalforsamling til generalforsamling. Skriv til <a href="mailto:askoesejlklub@gmail.com">askoesejlklub@gmail.com</a> eller betal direkte til havnefogeden.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="tight">
-  <div class="wrap reveal">
-    <div class="cta-banner">
-      <div>
-        <h2>Spørgsmål til havnen?</h2>
-        <p>Askø Sejlklub sidder klar til at hjælpe med plads, plan og alt det praktiske.</p>
-      </div>
-      <a class="btn" href="mailto:askoesejlklub@gmail.com">Skriv til sejlklubben</a>
-    </div>
   </div>
 </section>
 
@@ -302,7 +100,6 @@
   <button class="lb-pil lb-naeste" type="button" aria-label="Næste billede">&#8250;</button>
 </div>
 
-<style>@media(max-width:860px){#hero-grid{grid-template-columns:1fr!important}#hero-grid .ferry-board{border-radius:16px!important;margin-bottom:40px}}</style>
 <script src="script.js"></script>
 <script>
 (function(){
