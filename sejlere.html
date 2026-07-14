@@ -111,16 +111,16 @@
     <p class="sek-lede reveal">Luftfoto af Askø Havn med de vigtigste faciliteter markeret. Ikke et søkort. Brug altid et opdateret søkort og havnelods til selve indsejlingen og dybgangsforhold.</p>
     <div class="foto-annoteret reveal">
       <img src="images/havn-luftfoto.jpg" alt="Luftfoto af Askø Havn med bådpladser, havnehus og mole" loading="lazy">
-      <span class="foto-tag" style="top:46%;left:6%">Strand</span>
-      <span class="foto-tag" style="top:20%;left:23%">Campingområde</span>
+      <button type="button" class="foto-tag foto-tag--klik" style="top:46%;left:6%" data-galleri="strand" aria-label="Se billeder af stranden">Strand<svg class="cam" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg></button>
+      <button type="button" class="foto-tag foto-tag--klik" style="top:20%;left:23%" data-galleri="camping" aria-label="Se billeder af campingområdet">Campingområde<svg class="cam" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg></button>
       <span class="foto-tag" style="top:17%;left:41%">Cykeludlejning</span>
-      <span class="foto-tag" style="top:26%;left:44%">Havnehuset</span>
-      <span class="foto-tag" style="top:39%;left:23%">Jolle- &amp; bådpladser</span>
-      <span class="foto-tag" style="top:56%;left:37%">Sejlbådspladser</span>
-      <span class="foto-tag" style="top:43%;left:61%">Færgeleje</span>
-      <span class="foto-tag" style="top:61%;left:83%">Badested</span>
+      <button type="button" class="foto-tag foto-tag--klik" style="top:26%;left:44%" data-galleri="havnehuset" aria-label="Se billeder af havnehuset">Havnehuset<svg class="cam" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg></button>
+      <button type="button" class="foto-tag foto-tag--klik" style="top:39%;left:23%" data-galleri="jolle" aria-label="Se billeder af jolle- og bådpladserne">Jolle- &amp; bådpladser<svg class="cam" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg></button>
+      <button type="button" class="foto-tag foto-tag--klik" style="top:56%;left:37%" data-galleri="sejlbaad" aria-label="Se billeder af sejlbådspladserne">Sejlbådspladser<svg class="cam" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg></button>
+      <button type="button" class="foto-tag foto-tag--klik" style="top:43%;left:61%" data-galleri="faergeleje" aria-label="Se billede af færgelejet">Færgeleje<svg class="cam" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg></button>
+      <button type="button" class="foto-tag foto-tag--klik" style="top:61%;left:83%" data-galleri="badested" aria-label="Se billeder af badestedet">Badested<svg class="cam" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg></button>
     </div>
-    <p class="foto-tekst reveal">Askø Havn set fra luften. 17 sejlbådspladser og 43 jolle- & bådpladser ligger i den lukkede bassin til venstre.</p>
+    <p class="foto-tekst reveal">Askø Havn set fra luften. Tryk på et punkt med <svg class="cam-inline" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg> for at se billeder derfra. 17 sejlbådspladser og 43 jolle- &amp; bådpladser ligger i den lukkede bassin til venstre.</p>
     <p class="kort-note reveal">Ikke et søkort. Se det <a href="turist.html#kort">rigtige kort over øerne</a>, og brug altid officielt søkort til navigation.</p>
   </div>
 </section>
@@ -288,7 +288,91 @@
   </div>
 </footer>
 
+<div class="lightbox" id="lightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Billedgalleri">
+  <button class="lb-luk" type="button" aria-label="Luk galleri">&times;</button>
+  <button class="lb-pil lb-forrige" type="button" aria-label="Forrige billede">&#8249;</button>
+  <figure class="lb-figur">
+    <img class="lb-billede" alt="">
+    <figcaption class="lb-tekst"><span class="lb-titel"></span><span class="lb-tal"></span></figcaption>
+  </figure>
+  <button class="lb-pil lb-naeste" type="button" aria-label="Næste billede">&#8250;</button>
+</div>
+
 <style>@media(max-width:860px){#hero-grid{grid-template-columns:1fr!important}#hero-grid .ferry-board{border-radius:16px!important;margin-bottom:40px}}</style>
 <script src="script.js"></script>
+<script>
+(function(){
+  const galleri = {
+    strand:     {titel:"Strand",              n:3},
+    camping:    {titel:"Campingområde",       n:4},
+    havnehuset: {titel:"Havnehuset",          n:9},
+    jolle:      {titel:"Jolle- & bådpladser", n:3},
+    sejlbaad:   {titel:"Sejlbådspladser",     n:6},
+    faergeleje: {titel:"Færgeleje",           n:1},
+    badested:   {titel:"Badested",            n:4}
+  };
+  Object.keys(galleri).forEach(k=>{
+    galleri[k].billeder = Array.from({length:galleri[k].n}, (_,i)=>`images/galleri/${k}-${i+1}.jpg`);
+  });
+
+  const lb    = document.getElementById('lightbox');
+  const imgEl = lb.querySelector('.lb-billede');
+  const titel = lb.querySelector('.lb-titel');
+  const tal   = lb.querySelector('.lb-tal');
+  const prev  = lb.querySelector('.lb-forrige');
+  const next  = lb.querySelector('.lb-naeste');
+  let aktiv = null, idx = 0, sidsteFokus = null;
+
+  function vis(i){
+    const b = galleri[aktiv].billeder;
+    idx = (i + b.length) % b.length;
+    imgEl.src = b[idx];
+    imgEl.alt = galleri[aktiv].titel + " – billede " + (idx+1);
+    titel.textContent = galleri[aktiv].titel;
+    tal.textContent = b.length > 1 ? (idx+1) + " / " + b.length : "";
+    const flere = b.length > 1;
+    prev.style.display = flere ? "" : "none";
+    next.style.display = flere ? "" : "none";
+    // forudindlæs naboer
+    if(flere){ new Image().src = b[(idx+1)%b.length]; new Image().src = b[(idx-1+b.length)%b.length]; }
+  }
+  function aaben(key){
+    aktiv = key; sidsteFokus = document.activeElement;
+    lb.hidden = false; lb.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+    vis(0);
+    lb.querySelector('.lb-luk').focus();
+  }
+  function luk(){
+    lb.hidden = true; lb.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+    imgEl.src = ''; aktiv = null;
+    if(sidsteFokus) sidsteFokus.focus();
+  }
+
+  document.querySelectorAll('.foto-tag--klik').forEach(btn=>{
+    btn.addEventListener('click', ()=> aaben(btn.dataset.galleri));
+  });
+  lb.querySelector('.lb-luk').addEventListener('click', luk);
+  prev.addEventListener('click', ()=> vis(idx-1));
+  next.addEventListener('click', ()=> vis(idx+1));
+  lb.addEventListener('click', e=>{ if(e.target === lb) luk(); });
+  document.addEventListener('keydown', e=>{
+    if(lb.hidden) return;
+    if(e.key === 'Escape') luk();
+    else if(e.key === 'ArrowRight') vis(idx+1);
+    else if(e.key === 'ArrowLeft') vis(idx-1);
+  });
+  // swipe på touch
+  let x0 = null;
+  lb.addEventListener('touchstart', e=>{ x0 = e.changedTouches[0].clientX; }, {passive:true});
+  lb.addEventListener('touchend', e=>{
+    if(x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if(Math.abs(dx) > 40){ vis(dx < 0 ? idx+1 : idx-1); }
+    x0 = null;
+  }, {passive:true});
+})();
+</script>
 </body>
 </html>

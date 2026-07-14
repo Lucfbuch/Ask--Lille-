@@ -233,6 +233,40 @@ a.kort:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(20,51,60,.10
 .foto-tag::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--aeble);flex:none}
 @media(max-width:640px){.foto-tag{font-size:8px;padding:2px 6px 2px 5px;gap:4px}.foto-tag::before{width:4px;height:4px}}
 
+/* Klikbare labels med galleri */
+button.foto-tag{font-family:'IBM Plex Mono',monospace;cursor:pointer;border:none;-webkit-appearance:none;appearance:none}
+.foto-tag--klik{transition:background .15s, transform .12s}
+.foto-tag--klik:hover,.foto-tag--klik:focus-visible{background:var(--aeble);transform:translate(-50%,-50%) scale(1.06)}
+.foto-tag--klik .cam{width:11px;height:11px;fill:none;stroke:#fff;stroke-width:1.6;stroke-linejoin:round;flex:none;opacity:.85}
+@media(max-width:640px){.foto-tag--klik .cam{width:9px;height:9px}}
+.cam-inline{width:14px;height:14px;fill:none;stroke:var(--graa);stroke-width:1.6;stroke-linejoin:round;vertical-align:-2px;display:inline-block}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;
+  background:rgba(8,20,25,.92);backdrop-filter:blur(4px);padding:24px}
+.lightbox[hidden]{display:none}
+.lb-figur{margin:0;max-width:min(1100px,94vw);max-height:88vh;display:flex;flex-direction:column;align-items:center;gap:14px}
+.lb-billede{max-width:100%;max-height:80vh;width:auto;height:auto;object-fit:contain;border-radius:10px;
+  box-shadow:0 20px 60px rgba(0,0,0,.5);background:#0c2229}
+.lb-tekst{display:flex;gap:14px;align-items:baseline;color:rgba(255,255,255,.9);
+  font-family:'IBM Plex Mono',monospace;font-size:14px}
+.lb-tekst .lb-tal{color:rgba(255,255,255,.55);font-size:13px}
+.lb-luk{position:absolute;top:18px;right:22px;background:none;border:none;color:#fff;font-size:38px;line-height:1;
+  cursor:pointer;opacity:.8;transition:opacity .15s;padding:4px 10px}
+.lb-luk:hover,.lb-luk:focus-visible{opacity:1}
+.lb-pil{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:none;color:#fff;
+  width:52px;height:52px;border-radius:50%;font-size:30px;line-height:1;cursor:pointer;transition:background .15s;
+  display:flex;align-items:center;justify-content:center}
+.lb-pil:hover,.lb-pil:focus-visible{background:rgba(255,255,255,.28)}
+.lb-forrige{left:18px}
+.lb-naeste{right:18px}
+@media(max-width:640px){
+  .lb-pil{width:42px;height:42px;font-size:24px}
+  .lb-forrige{left:8px}.lb-naeste{right:8px}
+  .lb-luk{top:10px;right:12px;font-size:32px}
+  .lightbox{padding:12px}
+}
+
 /* Kort-iframe */
 .kortramme{
   border:1px solid var(--linje);border-radius:var(--radius);overflow:hidden;
