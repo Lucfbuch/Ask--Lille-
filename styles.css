@@ -408,18 +408,15 @@ footer a:hover{color:#fff}
 .pris-liste li:last-child{border-bottom:none}
 .pris-liste li span{font-weight:600;font-family:'Bricolage Grotesque',sans-serif;color:var(--hav);white-space:nowrap}
 
-/* ---------- CYKELUDLEJNING ---------- */
-.cykel-boks{display:grid;grid-template-columns:1.6fr .9fr;border:1px solid rgba(232,240,236,.15);border-radius:var(--radius);overflow:hidden;background:rgba(232,240,236,.06)}
-.cykel-info{padding:32px 30px}
-.cykel-info .ikon{font-size:30px;display:block;margin-bottom:12px}
-.cykel-info h3{font-size:22px;margin-bottom:10px;color:#fff}
-.cykel-info p{font-size:15px;color:rgba(232,240,236,.72);margin-bottom:12px}
-.cykel-info p:last-child{margin-bottom:0}
-.cykel-info .cykel-betaling{font-size:14px}
-.cykel-info a{color:var(--blomst)}
-.cykel-pris{background:rgba(232,240,236,.08);padding:30px 28px;display:flex;flex-direction:column;justify-content:center;gap:20px;border-left:1px solid rgba(232,240,236,.15)}
-.cp-row{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
-.cp-row span:first-child{font-size:15px;color:rgba(232,240,236,.85)}
-.cp-tal{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:26px;color:#fff;white-space:nowrap}
-.cp-tal small{font-size:13px;font-weight:400;color:rgba(232,240,236,.6);margin-left:2px}
-@media(max-width:620px){.cykel-boks{grid-template-columns:1fr}.cykel-pris{border-left:none;border-top:1px solid rgba(232,240,236,.15);flex-direction:row;justify-content:space-around}}
+/* ---------- KOM I LAND (cykel + købmand) ---------- */
+.ktl-boks{background:rgba(232,240,236,.06);border:1px solid rgba(232,240,236,.15);border-radius:var(--radius);padding:32px 30px;display:flex;flex-direction:column;height:100%}
+.ktl-boks .ikon{font-size:30px;display:block;margin-bottom:14px}
+.ktl-boks h3{font-size:22px;color:#fff;margin-bottom:10px}
+.ktl-boks > p{font-size:15px;color:rgba(232,240,236,.72);margin-bottom:18px;line-height:1.6}
+.ktl-fakta{display:flex;gap:32px;margin-bottom:20px;flex-wrap:wrap}
+.ktl-fakta .tal{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:24px;color:#fff;line-height:1;display:block}
+.ktl-fakta .lab{font-size:12px;color:rgba(232,240,236,.6);margin-top:5px;display:block;font-family:'IBM Plex Mono',monospace;letter-spacing:.03em}
+.ktl-note{font-size:13.5px;color:rgba(232,240,236,.55);margin-top:auto;line-height:1.55}
+.ktl-note a{color:var(--blomst)}
+.ktl-link{display:inline-block;align-self:flex-start;margin-top:auto;color:#fff;background:var(--aeble);font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:14px;text-decoration:none;padding:11px 22px;border-radius:999px;transition:background .15s}
+.ktl-link:hover{background:var(--aeble-moerk)}
