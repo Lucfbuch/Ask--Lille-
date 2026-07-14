@@ -224,14 +224,14 @@ a.kort:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(20,51,60,.10
 .foto-annoteret img{width:100%;display:block}
 .foto-tag{
   position:absolute;transform:translate(-50%,-50%);
-  display:flex;align-items:center;gap:6px;
+  display:flex;align-items:center;gap:5px;
   background:rgba(12,34,41,.82);backdrop-filter:blur(2px);
-  color:#fff;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;
-  padding:6px 12px 6px 10px;border-radius:999px;white-space:nowrap;
-  box-shadow:0 4px 14px rgba(0,0,0,.25);line-height:1.2;
+  color:#fff;font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;
+  padding:3px 8px 3px 6px;border-radius:999px;white-space:nowrap;
+  box-shadow:0 3px 10px rgba(0,0,0,.25);line-height:1.2;
 }
-.foto-tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--aeble);flex:none}
-@media(max-width:640px){.foto-tag{font-size:10px;padding:5px 9px 5px 7px}.foto-tag::before{width:5px;height:5px}}
+.foto-tag::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--aeble);flex:none}
+@media(max-width:640px){.foto-tag{font-size:8px;padding:2px 6px 2px 5px;gap:4px}.foto-tag::before{width:4px;height:4px}}
 
 /* Kort-iframe */
 .kortramme{
