@@ -1,12 +1,11 @@
 :root{
-  --hav:#14333C;
-  --hav-dyb:#0C2229;
+  --hav:#1D3B64;
+  --hav-dyb:#14294C;
   --soeglas:#EFF3F0;
   --skum:#FFFFFF;
   --aeble:#C13B2A;
   --aeble-moerk:#A5301F;
   --blomst:#E9C3BC;
-  --creme:#F2ECDF;
   --tang:#4E6E5D;
   --blaek:#1B2A2E;
   --graa:#4A5A5E;
@@ -382,24 +381,6 @@ footer a:hover{color:#fff}
   padding:24px 24px 24px 32px;margin-left:-32px;
 }
 .aar-stop.nu::before{left:-8px}
-
-/* ---------- PILOT: lyst & varmt tema + navy accent (kun body.tema-lys) ---------- */
-body.tema-lys{--hav:#1D3B64;--hav-dyb:#14294C}
-.tema-lys .moerk{background:var(--creme);color:var(--blaek)}
-.tema-lys .moerk .sek-label{color:var(--tang)}
-.tema-lys .moerk h2,.tema-lys .moerk h3{color:var(--blaek)}
-.tema-lys .moerk .sek-lede{color:#3A4A4E}
-.tema-lys .fac-grid{background:var(--linje);border-color:var(--linje)}
-.tema-lys .fac{background:var(--skum)}
-.tema-lys .fac h3{color:var(--blaek)}
-.tema-lys .fac p{color:var(--graa)}
-.tema-lys .ktl-boks{background:var(--skum);border-color:var(--linje)}
-.tema-lys .ktl-boks h3{color:var(--blaek)}
-.tema-lys .ktl-boks > p{color:var(--graa)}
-.tema-lys .ktl-fakta .tal{color:var(--hav)}
-.tema-lys .ktl-fakta .lab{color:var(--tang)}
-.tema-lys .ktl-note{color:var(--graa)}
-.tema-lys .ktl-note a{color:var(--aeble)}
 
 /* ---------- PRISER & BETALING ---------- */
 .pris-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-bottom:8px}
