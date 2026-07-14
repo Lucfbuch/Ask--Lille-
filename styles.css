@@ -381,3 +381,29 @@ footer a:hover{color:#fff}
   padding:24px 24px 24px 32px;margin-left:-32px;
 }
 .aar-stop.nu::before{left:-8px}
+
+/* ---------- PRISER & BETALING ---------- */
+.pris-tabel{background:var(--skum);border:1px solid var(--linje);border-radius:var(--radius);overflow:hidden;max-width:540px}
+.pris-tabel table{width:100%;border-collapse:collapse}
+.pris-tabel th,.pris-tabel td{padding:14px 22px;font-size:15.5px;text-align:left}
+.pris-tabel thead th{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--tang);background:rgba(20,51,60,.045);border-bottom:1px solid var(--linje)}
+.pris-tabel tbody tr{border-bottom:1px solid var(--linje)}
+.pris-tabel tbody tr:last-child{border-bottom:none}
+.pris-tabel td:last-child,.pris-tabel th:last-child{text-align:right;white-space:nowrap}
+.pris-tabel td:last-child{font-weight:600;font-family:'Bricolage Grotesque',sans-serif;color:var(--hav)}
+
+.guide{max-width:640px;margin-top:14px;border:1px solid var(--linje);border-radius:12px;background:var(--skum);overflow:hidden}
+.guide summary{cursor:pointer;padding:15px 20px;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;transition:color .15s}
+.guide summary::-webkit-details-marker{display:none}
+.guide summary::after{content:"+";font-size:22px;line-height:1;color:var(--aeble);font-weight:400;flex:none}
+.guide[open] summary::after{content:"\2013"}
+.guide summary:hover,.guide summary:focus-visible{color:var(--aeble)}
+.guide-krop{padding:2px 20px 20px;font-size:15px;color:var(--graa);line-height:1.6}
+.guide-krop p{margin-bottom:10px}
+.guide-krop ol,.guide-krop ul{margin:0 0 12px;padding-left:20px}
+.guide-krop li{margin-bottom:8px}
+.guide-krop a{color:var(--aeble);font-weight:500}
+.pris-liste{list-style:none;padding-left:0!important;margin-bottom:12px}
+.pris-liste li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px dashed var(--linje);padding:7px 0}
+.pris-liste li:last-child{border-bottom:none}
+.pris-liste li span{font-weight:600;font-family:'Bricolage Grotesque',sans-serif;color:var(--hav);white-space:nowrap}
