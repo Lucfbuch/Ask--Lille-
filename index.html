@@ -7,7 +7,7 @@
 <meta name="description" content="Askø og Lilleø i Smålandshavet: færge fra Kragenæs, æbleplantager, marsvin og ø-liv. Officiel side fra Askø/Lilleø Beboerforening.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=16">
+<link rel="stylesheet" href="styles.css?v=17">
 </head>
 <body>
 
@@ -28,7 +28,7 @@
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero hero--foto" style="background-image:url('images/havn-broer.jpg')">
   <div class="wrap" style="display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end" id="hero-grid">
     <div>
       <p class="eyebrow">Smålandshavet · 55.9° N</p>
@@ -68,57 +68,121 @@
 
 <section id="indgange" style="padding-top:24px">
   <div class="wrap">
-    <p class="sek-label reveal">Tre indgange</p>
+    <p class="sek-label reveal">Fire indgange</p>
     <h2 class="reveal">Hvem er du på øen?</h2>
-    <p class="sek-lede reveal">Siden her samles af Askø/Lilleø Beboerforening, hvad enten du kommer for en dag, et sommerhus eller hele livet.</p>
-    <div class="grid-3">
-      <a class="kort reveal" href="turist.html">
-        <span class="ikon">⛴</span>
-        <h3>Turist</h3>
-        <p>Endagstur eller weekend? Dagsprogram, kort over seværdigheder, kajak- og cykelruter, museet og kirken.</p>
-        <span class="pil">Planlæg besøget →</span>
+    <p class="sek-lede reveal">Siden her samles af Askø/Lilleø Beboerforening, hvad enten du kommer for en dag, sejler forbi, har et sommerhus eller bor her hele livet.</p>
+    <div class="grid-4" style="gap:20px">
+      <a class="foto-kort reveal" href="turist.html">
+        <div class="fk-billede"><img src="images/galleri/strand-1.jpg" alt="Sti gennem strandgræs ned til vandet på Askø" loading="lazy"></div>
+        <div class="fk-tekst">
+          <h3>Turist</h3>
+          <p>Endagstur eller weekend? Dagsprogram, seværdigheder og cykelruter.</p>
+          <span class="pil">Planlæg besøget →</span>
+        </div>
       </a>
-      <a class="kort reveal" href="oebo.html">
-        <span class="ikon">🏡</span>
-        <h3>Øbo & fritidsbeboer</h3>
-        <p>Praktisk information for helårs- og sommerhusbeboere, fra færgekort og nyhedsmail til grunde til salg.</p>
-        <span class="pil">Til beboersiderne →</span>
+      <a class="foto-kort reveal" href="sejlere.html">
+        <div class="fk-billede"><img src="images/hero-havn.jpg" alt="Spejlblankt vand i Askø Havn" loading="lazy"></div>
+        <div class="fk-tekst">
+          <h3>Sejler</h3>
+          <p>Interaktivt havnekort, priser, faciliteter og alt det praktiske før du lægger til.</p>
+          <span class="pil">Læg til her →</span>
+        </div>
       </a>
-      <a class="kort reveal" href="oe-liv.html">
-        <span class="ikon">🍎</span>
-        <h3>Ø-liv & foreninger</h3>
-        <p>Beboerforeningen, fællesarrangementer, frivillige hos købmanden og alt det, der får to små øer til at hænge sammen.</p>
-        <span class="pil">Mød foreningslivet →</span>
+      <a class="foto-kort reveal" href="oebo.html">
+        <div class="fk-billede">
+          <div class="ph ph--flad">
+            <span class="ph-ikon">📷</span>
+            <span class="ph-navn">Foto mangler</span>
+            <span class="ph-note">Landsbyen eller et af øens gamle huse</span>
+          </div>
+        </div>
+        <div class="fk-tekst">
+          <h3>Øbo & fritidsbeboer</h3>
+          <p>Praktisk info for helårs- og sommerhusbeboere, fra færgekort til nyhedsmail.</p>
+          <span class="pil">Til beboersiderne →</span>
+        </div>
+      </a>
+      <a class="foto-kort reveal" href="oe-liv.html">
+        <div class="fk-billede"><img src="images/standerhejsning.jpg" alt="Standerhejsning ved Askø Sejlklub med flag og fællesskab" loading="lazy"></div>
+        <div class="fk-tekst">
+          <h3>Ø-liv & foreninger</h3>
+          <p>Beboerforeningen, frivillige og alt det, der får to små øer til at hænge sammen.</p>
+          <span class="pil">Mød foreningslivet →</span>
+        </div>
       </a>
     </div>
   </div>
 </section>
 
-<section class="moerk" id="natur">
+<section class="tight" id="havnekort-teaser">
+  <div class="wrap">
+    <p class="sek-label reveal">Prøv vores signatur</p>
+    <h2 class="reveal">Udforsk havnen, før du kommer</h2>
+    <p class="sek-lede reveal">Vi har bygget et interaktivt kort over Askø Havn. Tryk på punkterne og se billeder af havnehuset, bådpladserne, stranden og badestedet.</p>
+    <a class="kort-teaser reveal" href="sejlere.html#havnekort">
+      <img src="images/havn-luftfoto.jpg" alt="Luftfoto af Askø Havn" loading="lazy">
+      <span class="foto-tag" style="top:26%;left:44%">Havnehuset</span>
+      <span class="foto-tag" style="top:46%;left:8%">Strand</span>
+      <span class="foto-tag" style="top:61%;left:82%">Badested</span>
+      <div class="kt-indhold">
+        <span class="kt-tekst"><strong>Interaktivt havnekort</strong>Tryk på et punkt og se billeder fra havnen</span>
+        <span class="btn btn-primary">Prøv kortet →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section id="natur">
   <div class="wrap">
     <p class="sek-label reveal">Naturen · året rundt</p>
-    <h2 class="reveal">Vandudsigt, charme og ekstra lys overalt</h2>
+    <h2 class="reveal">Fire årstider, fire forskellige øer</h2>
     <p class="sek-lede reveal">Flade strandenge med vadefugle, rovfugle over markerne, marsvin ved færgen og sæler i havnen. Øerne skifter karakter med årstiden, og de er aldrig ens to besøg i træk.</p>
-    <div class="aarstider reveal">
-      <div class="aarstid">
-        <span class="mono">Forår</span>
-        <h3>Æbleblomstring</h3>
-        <p>Når plantagerne på Lilleø springer ud, er øerne allersmukkest. Hvidt og lyserødt så langt øjet rækker.</p>
+    <div class="grid-4" style="gap:20px">
+      <div class="foto-kort reveal">
+        <div class="fk-billede">
+          <div class="ph ph--flad">
+            <span class="ph-ikon">📷</span>
+            <span class="ph-navn">Foto mangler</span>
+            <span class="ph-note">Æbleblomstring i plantagerne på Lilleø (maj)</span>
+          </div>
+        </div>
+        <div class="fk-tekst">
+          <h3>Forår</h3>
+          <p>Når plantagerne springer ud, er øerne allersmukkest. Hvidt og lyserødt så langt øjet rækker.</p>
+        </div>
       </div>
-      <div class="aarstid">
-        <span class="mono">Sommer</span>
-        <h3>Marsvin & sæler</h3>
-        <p>Færgen får tit selskab af legende marsvin, og sælerne hviler sig i havnen. Perfekt til kajak og badning.</p>
+      <div class="foto-kort reveal">
+        <div class="fk-billede"><img src="images/galleri/badested-2.jpg" alt="Badestedet ved molen en sommerdag" loading="lazy"></div>
+        <div class="fk-tekst">
+          <h3>Sommer</h3>
+          <p>Marsvin følger tit færgen, sælerne hviler i havnen. Perfekt til kajak og badning.</p>
+        </div>
       </div>
-      <div class="aarstid">
-        <span class="mono">Efterår</span>
-        <h3>Æblepluk & havtorn</h3>
-        <p>Vilde brombær, hyld og havtorn, og æblepluk i frugtplantagerne, når sæsonen tillader det.</p>
+      <div class="foto-kort reveal">
+        <div class="fk-billede">
+          <div class="ph ph--flad">
+            <span class="ph-ikon">📷</span>
+            <span class="ph-navn">Foto mangler</span>
+            <span class="ph-note">Æblepluk / kasser med æbler i plantagen (sept-okt)</span>
+          </div>
+        </div>
+        <div class="fk-tekst">
+          <h3>Efterår</h3>
+          <p>Vilde brombær, hyld og havtorn, og æblepluk i frugtplantagerne, når sæsonen tillader det.</p>
+        </div>
       </div>
-      <div class="aarstid">
-        <span class="mono">Vinter</span>
-        <h3>Ro & fugletræk</h3>
-        <p>Stilheden er total. Strandengene fyldes af trækfugle, og sommerhusskoven har stier helt for dig selv.</p>
+      <div class="foto-kort reveal">
+        <div class="fk-billede">
+          <div class="ph ph--flad">
+            <span class="ph-ikon">📷</span>
+            <span class="ph-navn">Foto mangler</span>
+            <span class="ph-note">Vinterstille havn eller strandeng med trækfugle</span>
+          </div>
+        </div>
+        <div class="fk-tekst">
+          <h3>Vinter</h3>
+          <p>Stilheden er total. Strandengene fyldes af trækfugle, og stierne er helt dine egne.</p>
+        </div>
       </div>
     </div>
   </div>

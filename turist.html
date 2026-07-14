@@ -7,7 +7,7 @@
 <meta name="description" content="Planlæg din tur til Askø og Lilleø: dagsprogram, seværdigheder, kort, cykel- og kajakruter og alt det praktiske.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=16">
+<link rel="stylesheet" href="styles.css?v=17">
 </head>
 <body>
 
@@ -28,7 +28,8 @@
   </div>
 </nav>
 
-<header class="hero sub">
+<header class="hero sub hero--foto hero--ph">
+  <span class="ph-chip">📷 Hero-foto mangler: cyklister på dæmningen eller kirken i modlys</span>
   <div class="wrap">
     <p class="brod"><a href="index.html">Forside</a> / Turist</p>
     <p class="eyebrow">For en- og flerdagsturister</p>
@@ -80,41 +81,63 @@
   </div>
 </section>
 
-<section class="moerk" id="sevaerdigheder">
+<section id="sevaerdigheder">
   <div class="wrap">
     <p class="sek-label reveal">Seværdigheder</p>
     <h2 class="reveal">Det skal du ikke snyde dig selv for</h2>
-    <div class="grid-3" style="margin-top:44px">
-      <div class="kort reveal" style="background:rgba(232,240,236,.06);border-color:rgba(232,240,236,.15)">
-        <span class="ikon">⛪</span>
-        <h3>Askø Kirke</h3>
-        <p style="color:rgba(232,240,236,.7)">Den lille kirke med den gotiske altertavle er et besøg værd, og et af øens ældste samlingspunkter.</p>
+    <div class="grid-3" style="margin-top:44px;gap:20px">
+      <div class="foto-kort reveal">
+        <div class="fk-billede">
+          <div class="ph ph--flad"><span class="ph-ikon">📷</span><span class="ph-navn">Foto mangler</span><span class="ph-note">Askø Kirke udefra (gerne med kirkegårdens pest-tjørn)</span></div>
+        </div>
+        <div class="fk-tekst">
+          <h3>Askø Kirke</h3>
+          <p>Den lille kirke med den gotiske altertavle er et besøg værd, og et af øens ældste samlingspunkter.</p>
+        </div>
       </div>
-      <div class="kort reveal" style="background:rgba(232,240,236,.06);border-color:rgba(232,240,236,.15)">
-        <span class="ikon">🏛</span>
-        <h3>Askø Museum</h3>
-        <p style="color:rgba(232,240,236,.7)">Svundne tider på Smålandshavets perler, fortalt af dem, der kender øens historie bedst.</p>
-        <a class="pil" style="color:var(--blomst)" href="https://askø-museum.dk">Besøg museets side →</a>
+      <a class="foto-kort reveal" href="https://askø-museum.dk">
+        <div class="fk-billede">
+          <div class="ph ph--flad"><span class="ph-ikon">📷</span><span class="ph-navn">Foto mangler</span><span class="ph-note">Askø Museum, facade eller udstilling</span></div>
+        </div>
+        <div class="fk-tekst">
+          <h3>Askø Museum</h3>
+          <p>Svundne tider på Smålandshavets perler, fortalt af dem, der kender øens historie bedst.</p>
+          <span class="pil">Besøg museets side →</span>
+        </div>
+      </a>
+      <div class="foto-kort reveal">
+        <div class="fk-billede">
+          <div class="ph ph--flad"><span class="ph-ikon">📷</span><span class="ph-navn">Foto mangler</span><span class="ph-note">Kirkestien: markvej/eng med udsigt til vandet</span></div>
+        </div>
+        <div class="fk-tekst">
+          <h3>Askø Kirkesti</h3>
+          <p>Afmærket vandrerute under Spor i Landskabet, gennem enge, marker og forbi de bedste udsigter.</p>
+        </div>
       </div>
-      <div class="kort reveal" style="background:rgba(232,240,236,.06);border-color:rgba(232,240,236,.15)">
-        <span class="ikon">🥾</span>
-        <h3>Askø Kirkesti</h3>
-        <p style="color:rgba(232,240,236,.7)">Afmærket vandrerute under Spor i Landskabet, gennem enge, marker og forbi de bedste udsigter.</p>
+      <div class="foto-kort reveal">
+        <div class="fk-billede">
+          <div class="ph ph--flad"><span class="ph-ikon">📷</span><span class="ph-navn">Foto mangler</span><span class="ph-note">Æbleplantagerne på Lilleø (blomstring eller frugt)</span></div>
+        </div>
+        <div class="fk-tekst">
+          <h3>Lilleøs plantager</h3>
+          <p>Øerne er en del af Æbleøerne. Blomstring i maj, høst i september-oktober, og æblemost året rundt.</p>
+        </div>
       </div>
-      <div class="kort reveal" style="background:rgba(232,240,236,.06);border-color:rgba(232,240,236,.15)">
-        <span class="ikon">🍎</span>
-        <h3>Lilleøs plantager</h3>
-        <p style="color:rgba(232,240,236,.7)">Øerne er en del af Æbleøerne. Blomstring i maj, høst i september-oktober, og æblemost året rundt.</p>
+      <div class="foto-kort reveal">
+        <div class="fk-billede">
+          <div class="ph ph--flad"><span class="ph-ikon">📷</span><span class="ph-navn">Foto mangler</span><span class="ph-note">Fugle over strandengen, gerne i aftenlys</span></div>
+        </div>
+        <div class="fk-tekst">
+          <h3>Fugleparadiset</h3>
+          <p>Vadefugle i de flade strandenge og rovfugle, der kredser efter bytte. Tag kikkerten med.</p>
+        </div>
       </div>
-      <div class="kort reveal" style="background:rgba(232,240,236,.06);border-color:rgba(232,240,236,.15)">
-        <span class="ikon">🦅</span>
-        <h3>Fugleparadiset</h3>
-        <p style="color:rgba(232,240,236,.7)">Vadefugle i de flade strandenge og rovfugle, der kredser efter bytte. Tag kikkerten med.</p>
-      </div>
-      <div class="kort reveal" style="background:rgba(232,240,236,.06);border-color:rgba(232,240,236,.15)">
-        <span class="ikon">🛶</span>
-        <h3>Kajak rundt om øerne</h3>
-        <p style="color:rgba(232,240,236,.7)">På en rolig dag kan du padle begge øer rundt og se dem fra den side, de er smukkest fra: vandet.</p>
+      <div class="foto-kort reveal">
+        <div class="fk-billede"><img src="images/galleri/jolle-2.jpg" alt="Små både og joller i det lave vand ved Askø Havn" loading="lazy"></div>
+        <div class="fk-tekst">
+          <h3>Kajak rundt om øerne</h3>
+          <p>På en rolig dag kan du padle begge øer rundt og se dem fra den side, de er smukkest fra: vandet.</p>
+        </div>
       </div>
     </div>
   </div>

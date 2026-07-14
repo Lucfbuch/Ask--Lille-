@@ -35,7 +35,7 @@ a{color:inherit}
 img{max-width:100%;display:block}
 
 /* ---------- Scroll reveal ---------- */
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .85s cubic-bezier(.22,.61,.36,1),transform .85s cubic-bezier(.22,.61,.36,1)}
 .reveal.vist{opacity:1;transform:none}
 
 /* ---------- NAV ---------- */
@@ -80,7 +80,7 @@ header.hero{
   font-family:'IBM Plex Mono';font-size:12px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--tang);margin-bottom:18px;
 }
-h1{font-size:clamp(42px,6.5vw,80px);margin-bottom:22px}
+h1{font-size:clamp(46px,7.2vw,94px);margin-bottom:22px}
 h1 em{font-style:normal;color:var(--aeble)}
 .hero-lede{font-size:19px;max-width:48ch;color:#3A4A4E;margin-bottom:34px}
 .btn{
@@ -122,7 +122,7 @@ header.hero.hero--foto .btn-ghost:hover{background:#fff;color:var(--hav)}
 
 /* undersider: kompakt hero */
 header.hero.sub{padding-top:64px}
-header.hero.sub h1{font-size:clamp(36px,5vw,60px)}
+header.hero.sub h1{font-size:clamp(40px,5.8vw,72px)}
 header.hero.sub .hero-lede{margin-bottom:44px}
 .brod{font-family:'IBM Plex Mono';font-size:12px;color:var(--tang);margin-bottom:22px}
 .brod a{text-decoration:none;opacity:.7}
@@ -135,7 +135,7 @@ section.tight{padding:64px 0}
   font-family:'IBM Plex Mono';font-size:12px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--tang);margin-bottom:14px;
 }
-h2{font-size:clamp(28px,4vw,44px);margin-bottom:16px;max-width:22ch}
+h2{font-size:clamp(30px,4.6vw,52px);margin-bottom:16px;max-width:22ch}
 .sek-lede{font-size:17px;color:#3A4A4E;max-width:62ch;margin-bottom:44px}
 
 /* Kort-komponenter */
@@ -243,6 +243,65 @@ a.kort:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(20,51,60,.10
 .foto-ramme img{width:100%;height:100%;object-fit:cover;display:block}
 .foto-tekst{font-size:13px;color:var(--graa);margin-top:12px}
 .moerk .foto-tekst{color:rgba(232,240,236,.6)}
+
+/* ---------- FOTO-PLACEHOLDER (markerer manglende billeder) ---------- */
+.ph{
+  position:relative;height:100%;min-height:180px;
+  background:repeating-linear-gradient(45deg,#E3EBE6,#E3EBE6 14px,#EDF2EE 14px,#EDF2EE 28px);
+  border:2px dashed rgba(29,59,100,.3);border-radius:var(--radius);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;
+  text-align:center;padding:22px;
+}
+.ph .ph-ikon{font-size:26px;opacity:.65}
+.ph .ph-navn{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--aeble);font-weight:500}
+.ph .ph-note{font-size:13px;color:var(--graa);max-width:26ch;line-height:1.45}
+.ph--flad{border-radius:0;border:none;min-height:0}
+
+/* Hero-variant uden foto: gradient + markerings-chip */
+.hero--ph{background-image:linear-gradient(135deg,#1D3B64 0%,#2A4E78 55%,#3E6B95 100%)}
+.ph-chip{
+  position:absolute;top:80px;right:22px;z-index:3;
+  background:rgba(255,255,255,.93);color:var(--blaek);
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;
+  padding:9px 15px;border-radius:999px;border:1.5px dashed var(--aeble);
+  display:flex;gap:8px;align-items:center;max-width:min(78vw,420px);
+}
+
+/* ---------- FOTO-KORT (billedbårne indgange, à la Visit Ærø) ---------- */
+.foto-kort{
+  display:flex;flex-direction:column;text-decoration:none;
+  background:var(--skum);border:1px solid var(--linje);border-radius:var(--radius);
+  overflow:hidden;transition:transform .22s ease,box-shadow .22s ease;
+}
+a.foto-kort:hover{transform:translateY(-6px);box-shadow:0 24px 52px rgba(29,59,100,.16)}
+.fk-billede{aspect-ratio:4/3;overflow:hidden;background:#DCE9E4;position:relative}
+.fk-billede img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.22,.61,.36,1)}
+a.foto-kort:hover .fk-billede img{transform:scale(1.06)}
+.fk-billede .ph{border-radius:0;border:none;border-bottom:2px dashed rgba(29,59,100,.2)}
+.fk-tekst{padding:22px 24px 26px;display:flex;flex-direction:column;gap:8px;flex:1}
+.fk-tekst h3{font-size:22px}
+.fk-tekst p{font-size:14.5px;color:var(--graa)}
+.fk-tekst .pil{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--aeble);font-weight:500;margin-top:auto}
+
+/* ---------- EDITORIAL SPLIT (billede + tekst side om side) ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split-billede{border-radius:var(--radius);overflow:hidden;min-height:340px;display:flex}
+.split-billede img{width:100%;height:100%;object-fit:cover;display:block}
+.split--flip .split-billede{order:2}
+@media(max-width:860px){.split{grid-template-columns:1fr;gap:28px}.split--flip .split-billede{order:0}}
+
+/* ---------- KORT-TEASER (interaktivt kort som signatur på forsiden) ---------- */
+.kort-teaser{position:relative;display:block;text-decoration:none;border-radius:var(--radius);overflow:hidden;box-shadow:0 18px 54px rgba(29,59,100,.16);line-height:0}
+.kort-teaser img{width:100%;display:block;transition:transform .9s cubic-bezier(.22,.61,.36,1)}
+.kort-teaser:hover img{transform:scale(1.03)}
+.kort-teaser::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,41,76,0) 40%,rgba(20,41,76,.72) 100%)}
+.kt-indhold{
+  position:absolute;left:30px;right:30px;bottom:26px;z-index:2;line-height:1.4;
+  display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;color:#fff;
+}
+.kt-indhold .kt-tekst{font-size:16px;max-width:44ch}
+.kt-indhold .kt-tekst strong{font-family:'Bricolage Grotesque',sans-serif;font-size:22px;display:block;margin-bottom:4px}
+@media(max-width:640px){.kt-indhold{left:18px;right:18px;bottom:16px}}
 
 .foto-annoteret{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:0 16px 50px rgba(20,51,60,.10);line-height:0}
 .foto-annoteret img{width:100%;display:block}
