@@ -116,6 +116,9 @@ header.hero.hero--foto .brod a{color:#fff}
 header.hero.hero--foto .eyebrow{color:rgba(255,255,255,.85)}
 header.hero.hero--foto h1{color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.35)}
 header.hero.hero--foto h1 em{color:#AED98C}
+.ae-apple{display:inline-block;width:.94em;height:1.08em;vertical-align:-.2em;margin:0 -.04em}
+.ae-apple svg{display:block;width:100%;height:100%}
+.visuallyhidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 header.hero.hero--foto .hero-lede{color:rgba(255,255,255,.92)}
 header.hero.hero--foto .btn-ghost{border-color:rgba(255,255,255,.9);color:#fff}
 header.hero.hero--foto .btn-ghost:hover{background:#fff;color:var(--hav)}
