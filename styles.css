@@ -283,6 +283,33 @@ a.foto-kort:hover .fk-billede img{transform:scale(1.06)}
 .fk-tekst p{font-size:14.5px;color:var(--graa)}
 .fk-tekst .pil{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--aeble);font-weight:500;margin-top:auto}
 
+/* Foto-kort som knap (åbner info-modal) */
+button.foto-kort{appearance:none;-webkit-appearance:none;font:inherit;color:inherit;padding:0;cursor:pointer}
+button.foto-kort .fk-tekst{text-align:left}
+button.foto-kort:hover{transform:translateY(-6px);box-shadow:0 24px 52px rgba(29,59,100,.16)}
+button.foto-kort:hover .fk-billede img{transform:scale(1.06)}
+
+/* Info-modal (læs mere om seværdigheder) */
+.info-modal{position:fixed;inset:0;z-index:110;display:flex;align-items:center;justify-content:center;
+  background:rgba(8,20,25,.55);backdrop-filter:blur(3px);padding:20px}
+.info-modal[hidden]{display:none}
+.im-kort{background:var(--skum);border-radius:var(--radius);max-width:680px;width:100%;max-height:88vh;
+  overflow:auto;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.im-billede{aspect-ratio:16/9;overflow:hidden;background:#DCE9E4}
+.im-billede img{width:100%;height:100%;object-fit:cover;display:block}
+.im-indhold{padding:26px 30px 32px}
+.im-indhold h3{font-size:26px;margin-bottom:12px}
+.im-indhold p{font-size:15.5px;color:var(--graa);margin-bottom:12px;line-height:1.65}
+.im-luk{position:absolute;top:12px;right:14px;z-index:2;background:rgba(12,34,41,.55);border:none;color:#fff;
+  width:38px;height:38px;border-radius:50%;font-size:21px;line-height:1;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:background .15s}
+.im-luk:hover{background:rgba(12,34,41,.85)}
+.im-link{display:inline-block;margin-top:6px;background:var(--aeble);color:#fff;text-decoration:none;
+  font-weight:600;font-family:'Bricolage Grotesque',sans-serif;font-size:14px;padding:11px 22px;
+  border-radius:999px;transition:background .15s}
+.im-link:hover{background:var(--aeble-moerk)}
+@media(max-width:520px){.im-indhold{padding:20px 20px 24px}.im-indhold h3{font-size:22px}}
+
 /* ---------- EDITORIAL SPLIT (billede + tekst side om side) ---------- */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .split-billede{border-radius:var(--radius);overflow:hidden;min-height:340px;display:flex}

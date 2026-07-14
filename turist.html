@@ -7,7 +7,7 @@
 <meta name="description" content="Oplev to øer på én dag: tag morgenfærgen fra Kragenæs til Askø og Lilleø, cykl begge øer rundt og vær hjemme til aften. Dagsprogram, seværdigheder og alt det praktiske.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=17">
+<link rel="stylesheet" href="styles.css?v=18">
 </head>
 <body>
 
@@ -49,75 +49,80 @@
     <p class="sek-label reveal">Seværdigheder</p>
     <h2 class="reveal">Det skal du ikke snyde dig selv for</h2>
     <div class="grid-3" style="margin-top:44px;gap:20px">
-      <div class="foto-kort reveal">
+      <button type="button" class="foto-kort reveal" data-emne="kirke">
         <div class="fk-billede">
           <div class="ph ph--flad"><span class="ph-ikon">📷</span><span class="ph-navn">Foto mangler</span><span class="ph-note">Askø Kirke udefra (gerne med kirkegårdens pest-tjørn)</span></div>
         </div>
         <div class="fk-tekst">
           <h3>Askø Kirke</h3>
           <p>Den lille kirke med den gotiske altertavle er et besøg værd, og et af øens ældste samlingspunkter.</p>
+          <span class="pil">Læs mere →</span>
         </div>
-      </div>
-      <a class="foto-kort reveal" href="https://askø-museum.dk">
+      </button>
+      <button type="button" class="foto-kort reveal" data-emne="museum">
         <div class="fk-billede">
           <div class="ph ph--flad"><span class="ph-ikon">📷</span><span class="ph-navn">Foto mangler</span><span class="ph-note">Askø Museum, facade eller udstilling</span></div>
         </div>
         <div class="fk-tekst">
           <h3>Askø Museum</h3>
           <p>Svundne tider på Smålandshavets perler, fortalt af dem, der kender øens historie bedst.</p>
-          <span class="pil">Besøg museets side →</span>
+          <span class="pil">Læs mere →</span>
         </div>
-      </a>
-      <div class="foto-kort reveal">
+      </button>
+      <button type="button" class="foto-kort reveal" data-emne="kirkesti">
         <div class="fk-billede">
           <div class="ph ph--flad"><span class="ph-ikon">📷</span><span class="ph-navn">Foto mangler</span><span class="ph-note">Kirkestien: markvej/eng med udsigt til vandet</span></div>
         </div>
         <div class="fk-tekst">
           <h3>Askø Kirkesti</h3>
           <p>Afmærket vandrerute under Spor i Landskabet, gennem enge, marker og forbi de bedste udsigter.</p>
+          <span class="pil">Læs mere →</span>
         </div>
-      </div>
-      <div class="foto-kort reveal">
+      </button>
+      <button type="button" class="foto-kort reveal" data-emne="plantager">
         <div class="fk-billede">
           <div class="ph ph--flad"><span class="ph-ikon">📷</span><span class="ph-navn">Foto mangler</span><span class="ph-note">Æbleplantagerne på Lilleø (blomstring eller frugt)</span></div>
         </div>
         <div class="fk-tekst">
           <h3>Lilleøs plantager</h3>
           <p>Øerne er en del af Æbleøerne. Blomstring i maj, høst i september-oktober, og æblemost året rundt.</p>
+          <span class="pil">Læs mere →</span>
         </div>
-      </div>
-      <a class="foto-kort reveal" href="https://askoe-krukken.dk/">
+      </button>
+      <button type="button" class="foto-kort reveal" data-emne="krukken">
         <div class="fk-billede"><img src="images/krukken.jpg" alt="Værterne foran Café Askø Krukkens gule gavl" loading="lazy"></div>
         <div class="fk-tekst">
           <h3>Café Askø Krukken</h3>
           <p>Øens café serverer frokost, kaffe og kage, og laver fin marmelade, du kan købe med hjem.</p>
-          <span class="pil">Besøg Askø Krukken →</span>
+          <span class="pil">Læs mere →</span>
         </div>
-      </a>
-      <a class="foto-kort reveal" href="https://www.lilleovin.dk/">
+      </button>
+      <button type="button" class="foto-kort reveal" data-emne="gaardbutik">
         <div class="fk-billede"><img src="images/gaardbutik.jpg" alt="Askøs gårdbutik indenfor, med Lilleø-vin i trækasser" loading="lazy"></div>
         <div class="fk-tekst">
           <h3>Askøs gårdbutik</h3>
           <p>Lokale varer fra øerne, og eneste forhandler af Lilleø-vinen, der produceres på Lilleø.</p>
-          <span class="pil">Om Lilleø-vinen →</span>
+          <span class="pil">Læs mere →</span>
         </div>
-      </a>
-      <div class="foto-kort reveal">
+      </button>
+      <button type="button" class="foto-kort reveal" data-emne="fugle">
         <div class="fk-billede">
           <div class="ph ph--flad"><span class="ph-ikon">📷</span><span class="ph-navn">Foto mangler</span><span class="ph-note">Fugle over strandengen, gerne i aftenlys</span></div>
         </div>
         <div class="fk-tekst">
           <h3>Fugleparadiset</h3>
           <p>Vadefugle i de flade strandenge og rovfugle, der kredser efter bytte. Tag kikkerten med.</p>
+          <span class="pil">Læs mere →</span>
         </div>
-      </div>
-      <div class="foto-kort reveal">
+      </button>
+      <button type="button" class="foto-kort reveal" data-emne="kajak">
         <div class="fk-billede"><img src="images/galleri/jolle-2.jpg" alt="Små både og joller i det lave vand ved Askø Havn" loading="lazy"></div>
         <div class="fk-tekst">
           <h3>Kajak rundt om øerne</h3>
           <p>På en rolig dag kan du padle begge øer rundt og se dem fra den side, de er smukkest fra: vandet.</p>
+          <span class="pil">Læs mere →</span>
         </div>
-      </div>
+      </button>
     </div>
   </div>
 </section>
@@ -257,6 +262,136 @@
   </div>
 </footer>
 
+<div class="info-modal" id="infoModal" hidden aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="im-kort">
+    <button class="im-luk" type="button" aria-label="Luk">&times;</button>
+    <div class="im-billede"></div>
+    <div class="im-indhold">
+      <h3></h3>
+      <div class="im-tekst"></div>
+      <a class="im-link" href="#" hidden></a>
+    </div>
+  </div>
+</div>
+
 <script src="script.js"></script>
+<script>
+(function(){
+  const emner = {
+    kirke: {
+      titel: "Askø Kirke",
+      img: null, note: "Askø Kirke udefra",
+      tekst: [
+        "Den lille, hvidkalkede kirke blev opført omkring år 1500 i sengotisk stil og ligger kun to meter over havet, tæt ved den tørlagte Kirkevig. Indenfor finder du den gotiske altertavle og kirkeskibet \"Askø's Enighed\", en fuldrigget fregat skænket af en søn af øen i 1867.",
+        "På kirkegården står pest-tjørnen, et levende minde om 1710-11, hvor Askø var karantænestation under den store pestepidemi. Kirken ligger på Askø Kirkevej 1."
+      ],
+      link: { url: "https://sogn.dk/askoe", txt: "Se gudstjenester hos Askø Sogn →" }
+    },
+    museum: {
+      titel: "Askø Museum",
+      img: null, note: "Askø Museum, facade eller udstilling",
+      tekst: [
+        "Askø Museum drives af frivillige og samler øens historie: fotografier, redskaber og fortællinger fra dengang øen havde mejeri, skole og snesevis af landbrug.",
+        "Museet ligger tæt på kirken, så de to besøg kombineres nemt på ruten."
+      ],
+      link: { url: "https://askø-museum.dk", txt: "Besøg museets side →" }
+    },
+    kirkesti: {
+      titel: "Askø Kirkesti",
+      img: null, note: "Kirkestien med udsigt til vandet",
+      tekst: [
+        "Kirkestien er en afmærket vandrerute under ordningen Spor i Landskabet. Den fører dig gennem enge og marker, forbi gamle gårde og ud til nogle af øens bedste udsigter over Smålandshavet.",
+        "Ruten er flad og familievenlig. Husk fornuftigt fodtøj efter regn."
+      ],
+      link: { url: "#kort", txt: "Find den på kortet →" }
+    },
+    plantager: {
+      titel: "Lilleøs plantager",
+      img: null, note: "Æbleplantagerne på Lilleø",
+      tekst: [
+        "Askø og Lilleø er en del af Æbleøerne, og på Lilleø ligger plantagerne tæt: æbler, pærer og blommer så langt øjet rækker. I maj står øen i hvidt og lyserødt flor, og i september-oktober hænger træerne tunge af frugt.",
+        "Cykl over dæmningen fra 1914 og køb frugt, most og andre lokale varer ved vejboderne, når sæsonen er til det."
+      ],
+      link: { url: "https://æbleøerne.dk", txt: "Læs om Æbleøerne →" }
+    },
+    krukken: {
+      titel: "Café Askø Krukken",
+      img: "images/krukken.jpg", alt: "Værterne foran Café Askø Krukkens gule gavl",
+      tekst: [
+        "Øens café ligger på Askø Mellevej og serverer frokost, kaffe og hjemmebagt kage i hyggelige rammer. Værterne laver også deres egen fine marmelade og syltetøj, som du kan købe med hjem, og der er takeaway, hvis du hellere vil nyde det på en bænk med vandudsigt.",
+        "Tjek de aktuelle åbningstider på deres hjemmeside, inden du lægger vejen forbi."
+      ],
+      link: { url: "https://askoe-krukken.dk/", txt: "Besøg Askø Krukken →" }
+    },
+    gaardbutik: {
+      titel: "Askøs gårdbutik",
+      img: "images/gaardbutik.jpg", alt: "Askøs gårdbutik med Lilleø-vin i trækasser",
+      tekst: [
+        "I gårdbutikken finder du lokale varer fra øerne, og så er den eneste forhandler af Lilleø-vinen: vin lavet på druer dyrket på Lilleø, midt i Smålandshavet.",
+        "En flaske Lilleø-vin er nok øernes bedste souvenir. Kig forbi og smag, hvad to små øer kan."
+      ],
+      link: { url: "https://www.lilleovin.dk/", txt: "Læs om Lilleø-vinen →" }
+    },
+    fugle: {
+      titel: "Fugleparadiset",
+      img: null, note: "Fugle over strandengen",
+      tekst: [
+        "De flade strandenge omkring øerne er et spisekammer for vadefugle, og over markerne kredser rovfuglene efter bytte. Forår og efterår passerer trækfuglene i store tal.",
+        "Tag kikkerten med og find en bænk med udsigt. Det bedste lys er tidlig morgen og sen eftermiddag."
+      ],
+      link: null
+    },
+    kajak: {
+      titel: "Kajak rundt om øerne",
+      img: "images/galleri/jolle-2.jpg", alt: "Små både i det lave vand ved Askø Havn",
+      tekst: [
+        "På en rolig dag kan du padle hele vejen rundt om begge øer og opleve dem fra den side, de er smukkest fra: vandet. Undervejs passerer du strandenge, stenrev og måske en nysgerrig sæl.",
+        "I havnen er der flydebro til kano og kajak, så isætning er nem. Hold øje med færgen ved ind- og udsejling."
+      ],
+      link: { url: "sejlere.html", txt: "Om havnen →" }
+    }
+  };
+
+  const modal = document.getElementById('infoModal');
+  const billede = modal.querySelector('.im-billede');
+  const titel = modal.querySelector('h3');
+  const tekst = modal.querySelector('.im-tekst');
+  const link = modal.querySelector('.im-link');
+  let sidsteFokus = null;
+
+  function aaben(key){
+    const e = emner[key];
+    if(!e) return;
+    sidsteFokus = document.activeElement;
+    titel.textContent = e.titel;
+    tekst.innerHTML = e.tekst.map(t => '<p>' + t + '</p>').join('');
+    if(e.img){
+      billede.innerHTML = '<img src="' + e.img + '" alt="' + (e.alt || '') + '">';
+    } else {
+      billede.innerHTML = '<div class="ph ph--flad" style="height:100%"><span class="ph-ikon">📷</span><span class="ph-navn">Foto mangler</span><span class="ph-note">' + (e.note || '') + '</span></div>';
+    }
+    if(e.link){
+      link.href = e.link.url; link.textContent = e.link.txt; link.hidden = false;
+    } else { link.hidden = true; }
+    modal.hidden = false; modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+    modal.querySelector('.im-luk').focus();
+  }
+  function luk(){
+    modal.hidden = true; modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+    if(sidsteFokus) sidsteFokus.focus();
+  }
+
+  document.querySelectorAll('.foto-kort[data-emne]').forEach(btn => {
+    btn.addEventListener('click', () => aaben(btn.dataset.emne));
+  });
+  modal.querySelector('.im-luk').addEventListener('click', luk);
+  modal.addEventListener('click', e => { if(e.target === modal) luk(); });
+  document.addEventListener('keydown', e => { if(!modal.hidden && e.key === 'Escape') luk(); });
+  // interne links (fx #kort) skal lukke modalen
+  link.addEventListener('click', () => { if(link.getAttribute('href').startsWith('#')) luk(); });
+})();
+</script>
 </body>
 </html>
