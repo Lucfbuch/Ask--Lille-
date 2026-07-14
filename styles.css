@@ -96,6 +96,29 @@ h1 em{font-style:normal;color:var(--aeble)}
 /* horisont-signatur */
 .horizon{display:block;width:100%;margin-top:-2px}
 
+/* Hero med baggrundsfoto */
+header.hero.hero--foto{
+  background-color:#0c2229;
+  background-size:cover;
+  background-position:center 58%;
+  background-repeat:no-repeat;
+  position:relative;
+  padding-top:96px;
+}
+header.hero.hero--foto::before{
+  content:"";position:absolute;inset:0;z-index:0;
+  background:linear-gradient(180deg,rgba(8,20,25,.5) 0%,rgba(8,20,25,.28) 40%,rgba(8,20,25,.82) 100%);
+}
+header.hero.hero--foto > .wrap{position:relative;z-index:1}
+header.hero.hero--foto .horizon{position:relative;z-index:1}
+header.hero.hero--foto .brod{color:rgba(255,255,255,.75)}
+header.hero.hero--foto .brod a{color:#fff}
+header.hero.hero--foto .eyebrow{color:rgba(255,255,255,.85)}
+header.hero.hero--foto h1{color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+header.hero.hero--foto .hero-lede{color:rgba(255,255,255,.92)}
+header.hero.hero--foto .btn-ghost{border-color:rgba(255,255,255,.9);color:#fff}
+header.hero.hero--foto .btn-ghost:hover{background:#fff;color:var(--hav)}
+
 /* undersider: kompakt hero */
 header.hero.sub{padding-top:64px}
 header.hero.sub h1{font-size:clamp(36px,5vw,60px)}
