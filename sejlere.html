@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sejlere · Askø & Lilleø</title>
-<meta name="description" content="Interaktivt kort over Askø Havn. Tryk på et punkt og se billeder fra havnen.">
+<meta name="description" content="Askø Havn for gæstesejlere: interaktivt havnekort, havnehus, mastekran og cykler til øen. Kast fortøjningen og mærk roen i Smålandshavet.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=2">
@@ -28,9 +28,36 @@
   </div>
 </nav>
 
+<header class="hero">
+  <div class="wrap" style="display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end" id="hero-grid">
+    <div>
+      <p class="brod"><a href="index.html">Forside</a> / Sejlere</p>
+      <p class="eyebrow">For gæstesejlere</p>
+      <h1>Kast fortøjningen.<br><em>Mærk roen.</em></h1>
+      <p class="hero-lede">En lille, rolig havn midt i Smålandshavet — med eget havnehus, mastekran og cykler klar til at tage dig rundt på øen.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#havnekort">Se havnen på kort</a>
+        <a class="btn btn-ghost" href="#kontakt">Kontakt havnefoged</a>
+      </div>
+    </div>
+    <aside class="ferry-board" aria-label="Havnefakta" style="border-radius:16px 16px 0 0">
+      <h3>Askø Havn · på et øjeblik</h3>
+      <div class="ferry-row"><span>Bådpladser i alt</span><span class="tid">60</span></div>
+      <div class="ferry-row"><span>Sejlbådspladser</span><span class="tid">17</span></div>
+      <div class="ferry-row"><span>Jolle- & bådpladser</span><span class="tid">43</span></div>
+      <div class="ferry-row"><span>Havnefoged</span><span class="tid">51 64 79 68</span></div>
+      <p class="ferry-note">Position ca. 54.8965° N, 11.5015° Ø. Havnehuset står åbent for alle tilsejlende gæster, ikke kun medlemmer.</p>
+      <a class="book" href="#havnekort">Se havnen på kort →</a>
+    </aside>
+  </div>
+  <svg class="horizon" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,90 L180,90 C240,90 260,74 340,72 C420,70 460,64 540,66 C600,67 640,80 700,82 L760,84 C790,85 810,88 840,88 L900,88 C960,88 990,70 1060,68 C1130,66 1170,60 1240,64 C1300,67 1340,82 1440,84 L1440,120 L0,120 Z" fill="#14333C"/>
+    <path d="M0,98 L1440,96 L1440,120 L0,120 Z" fill="#0C2229" opacity=".6"/>
+  </svg>
+</header>
+
 <section id="havnekort">
   <div class="wrap">
-    <p class="brod reveal"><a href="index.html">Forside</a> / Sejlere</p>
     <p class="sek-label reveal">Havnen på kort</p>
     <h2 class="reveal">Sådan ligger tingene</h2>
     <p class="sek-lede reveal">Luftfoto af Askø Havn med de vigtigste faciliteter markeret. Ikke et søkort. Brug altid et opdateret søkort og havnelods til selve indsejlingen og dybgangsforhold.</p>
@@ -51,6 +78,18 @@
     </div>
     <p class="foto-tekst reveal">Askø Havn set fra luften. 17 sejlbådspladser og 43 jolle- &amp; bådpladser ligger i den lukkede bassin til venstre.</p>
     <p class="kort-note reveal">Ikke et søkort. Se det <a href="turist.html#kort">rigtige kort over øerne</a>, og brug altid officielt søkort til navigation.</p>
+  </div>
+</section>
+
+<section class="tight" id="kontakt">
+  <div class="wrap reveal">
+    <div class="cta-banner">
+      <div>
+        <h2>Spørgsmål til havnen?</h2>
+        <p>Havnefogeden kan træffes på <a href="tel:+4551647968" style="color:#fff;text-decoration:underline">51 64 79 68</a> — eller skriv til Askø Sejlklub.</p>
+      </div>
+      <a class="btn" href="mailto:askoesejlklub@gmail.com">Skriv til sejlklubben</a>
+    </div>
   </div>
 </section>
 
@@ -100,6 +139,7 @@
   <button class="lb-pil lb-naeste" type="button" aria-label="Næste billede">&#8250;</button>
 </div>
 
+<style>@media(max-width:860px){#hero-grid{grid-template-columns:1fr!important}#hero-grid .ferry-board{border-radius:16px!important;margin-bottom:40px}}</style>
 <script src="script.js"></script>
 <script>
 (function(){
