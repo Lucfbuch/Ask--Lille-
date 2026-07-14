@@ -241,6 +241,17 @@ button.foto-tag{font-family:'IBM Plex Mono',monospace;cursor:pointer;border:none
 @media(max-width:640px){.foto-tag--klik .cam{width:9px;height:9px}}
 .cam-inline{width:14px;height:14px;fill:none;stroke:var(--graa);stroke-width:1.6;stroke-linejoin:round;vertical-align:-2px;display:inline-block}
 
+/* Hint-banner over interaktivt kort */
+.kort-hint{
+  display:flex;align-items:center;gap:12px;margin-bottom:16px;
+  background:var(--aeble);color:#fff;border-radius:12px;
+  padding:13px 20px;font-size:14.5px;
+  box-shadow:0 6px 20px rgba(193,59,42,.22);
+}
+.kort-hint strong{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:-.01em;text-transform:uppercase;letter-spacing:.04em}
+.kort-hint-ikon{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:1.7;stroke-linejoin:round;flex:none}
+@media(max-width:520px){.kort-hint{font-size:13px;padding:11px 16px;gap:10px}.kort-hint-ikon{width:19px;height:19px}}
+
 /* Lightbox */
 .lightbox{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;
   background:rgba(8,20,25,.92);backdrop-filter:blur(4px);padding:24px}
