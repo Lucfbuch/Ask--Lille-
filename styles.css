@@ -122,11 +122,11 @@ header.hero.hero--foto .btn-ghost:hover{background:#fff;color:var(--hav)}
 
 /* ---------- Forside: split-hero + collage ---------- */
 .hero-split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding-bottom:64px}
-.hero-collage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:1.1fr 1fr .78fr;gap:10px;height:clamp(440px,44vw,560px)}
+.hero-collage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:1.15fr 1fr 1fr;gap:10px;height:clamp(460px,46vw,580px)}
 .hero-collage figure{margin:0;overflow:hidden;border-radius:14px;position:relative}
 .hero-collage img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .hero-collage figure:hover img{transform:scale(1.05)}
-.hc-oer,.hc-wide{grid-column:1 / -1}
+.hc-oer{grid-column:1 / -1}
 
 @media(max-width:820px){
   .hero-split{grid-template-columns:1fr;gap:30px}
