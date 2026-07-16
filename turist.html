@@ -123,6 +123,16 @@
           <span class="pil">Læs mere →</span>
         </div>
       </button>
+      <button type="button" class="foto-kort reveal" data-emne="shelter">
+        <div class="fk-billede">
+          <div class="ph ph--flad"><span class="ph-ikon">📷</span><span class="ph-navn">Foto mangler</span><span class="ph-note">Shelterpladsen ved den gamle skole</span></div>
+        </div>
+        <div class="fk-tekst">
+          <h3>Shelterpladsen</h3>
+          <p>Overnat i det fri ved den gamle skole, med Askø By og hele øen inden for gåafstand.</p>
+          <span class="pil">Læs mere →</span>
+        </div>
+      </button>
     </div>
   </div>
 </section>
@@ -349,6 +359,14 @@
         "I havnen er der flydebro til kano og kajak, så isætning er nem. Hold øje med færgen ved ind- og udsejling."
       ],
       link: { url: "sejlere.html", txt: "Om havnen →" }
+    },
+    shelter: {
+      titel: "Shelterpladsen",
+      note: "Shelterpladsen ved den gamle skole",
+      tekst: [
+        "Ved den gamle skole på Askø Skolevej ligger øens shelterplads. Her kan du overnatte i det fri med Askø By, købmanden og kirken lige om hjørnet — og hele øen inden for gåafstand.",
+        "Pladsen er et fint basecamp, hvis endagsturen ikke føles lang nok. Medbring liggeunderlag og sovepose, og tag dit affald med hjem, så pladsen er klar til de næste gæster."
+      ]
     }
   };
 
@@ -391,6 +409,15 @@
   document.addEventListener('keydown', e => { if(!modal.hidden && e.key === 'Escape') luk(); });
   // interne links (fx #kort) skal lukke modalen
   link.addEventListener('click', () => { if(link.getAttribute('href').startsWith('#')) luk(); });
+
+  // dybt link: turist.html#se-<emne> åbner modalen direkte (bruges af havnekortets vejviser)
+  if(location.hash.startsWith('#se-')){
+    const key = location.hash.slice(4);
+    if(emner[key]){
+      document.getElementById('sevaerdigheder').scrollIntoView();
+      aaben(key);
+    }
+  }
 })();
 </script>
 </body>
