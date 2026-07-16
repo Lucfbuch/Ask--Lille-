@@ -104,6 +104,17 @@ sips -s format jpeg -Z 1600 -s formatOptions 80 "/Users/lucasbuch/Desktop/Foto.H
 
 ---
 
+## 6b. Vejviser-kortet (juli 2026 — sidens nye signatur-feature)
+
+Interaktivt kort på **både sejlere.html (#vejviser) og turist.html (#kort)**: tryk på et mål, og en rød rute tegner sig fra havnen; når den er fremme, glider en info-boks frem (foto + "Læs mere" der åbner seværdigheds-modalen). Knappen "Vandrestier" tænder/slukker Kirkestien + kystruten som rød stiplet lag.
+
+- **Grundkort:** `images/kort-askoe.png` — OSM-fliser (zoom 15) syet sammen. Kildeangivelse "© OpenStreetMap contributors" er obligatorisk og står under kortet.
+- **Geometri:** ruterne er OSRM-gåruter (følger vejene), afstandene er ægte. Mål-koordinater er slået op via Nominatim/Overpass; Lucas har leveret adresserne (Gårdbutik: Lilleøvej 27 · Købmand: Konemadevej 45 · Shelterplads: Askø Skolevej 8).
+- **Vandrestierne** er OSM-stier, som Lucas har kurateret hårdt (mange segmenter fjernet som "ikke stier"), plus to håndlagte stykker efter hans anvisning: Kirkesti-forbindelsen langs grøften og kystruten om Østerhoved (følger kystlinje-polygonen + engens nordkant).
+- **Genbyg/udvid:** scripts ligger i scratchpad (byg_kort.py, byg_ruter2.py m.fl.) — men geometrien er indbagt i HTML'ens SVG, så nye mål kræver at køre pipeline igen (Nominatim → OSRM → pixels via web-mercator, Z=15, NV-hjørne 54.9170/11.4690).
+- **Dybe links:** `turist.html#se-<emne>` åbner seværdigheds-modalen direkte (hash-handler + hashchange i turist.html).
+- Pas på: `.reveal` + rutetegning kræver synlig fane — i throttled/occluded browser-pane fryser animationer (0 rAF); det er miljøet, ikke koden.
+
 ## 7. Verificerede fakta (brug disse — de er tjekket)
 
 - **Havnetakster 2026** (Lolland Havnes takstblad, bekræftet af Lucas): 0–7,99 m = 205 kr · 8–10,99 m = 225 kr · 11–13,99 m = 270 kr · 14–16,99 m = 320 kr · 17–19,99 m = 385 kr · 20 m+ = 22 kr/m · strøm 26 kr/døgn.

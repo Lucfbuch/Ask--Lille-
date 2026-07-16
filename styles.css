@@ -538,3 +538,32 @@ footer a:hover{color:#fff}
 .fac p{font-size:13.5px;color:rgba(232,240,236,.68);line-height:1.5}
 @media(max-width:820px){.fac-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.fac-grid{grid-template-columns:1fr}}
+
+/* ---------- VEJVISER-KORT (sejlere + turist) ---------- */
+.vv-kort{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 8px 30px rgba(20,51,60,.18)}
+.vv-kort>img{display:block;width:100%}
+.vv-svg{position:absolute;inset:0;width:100%;height:100%}
+.vv-rute{fill:none;stroke:var(--aeble);stroke-width:6;stroke-linecap:round;stroke-linejoin:round;opacity:0}
+.vv-pin{opacity:0;transition:opacity .3s ease}
+.vv-pin.vis{opacity:1}
+.vv-pin circle{fill:var(--aeble);stroke:#fff;stroke-width:3}
+.vv-pin--havn{opacity:1}
+.vv-pin--havn circle{fill:var(--hav)}
+.vv-stier{opacity:0;transition:opacity .8s ease;pointer-events:none}
+.vv-stier.vis{opacity:1}
+.vv-stier path{fill:none;stroke:var(--aeble);stroke-width:3.5;stroke-dasharray:7 6;stroke-linecap:round}
+.vv-knapper{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.vv-knap{font-family:'Inter',sans-serif;font-size:15px;font-weight:600;padding:11px 18px;border-radius:999px;border:1.5px solid var(--hav);background:#fff;color:var(--hav);cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.vv-knap:hover{background:rgba(29,59,100,.06)}
+.vv-knap.aktiv{background:var(--aeble);border-color:var(--aeble);color:#fff}
+.vv-kilde{font-family:'IBM Plex Mono';font-size:11px;color:var(--graa);margin-top:12px}
+.vv-kilde a{color:inherit}
+.vv-info{position:absolute;right:12px;bottom:12px;z-index:5;display:flex;gap:12px;align-items:center;background:#fff;border-radius:14px;box-shadow:0 6px 24px rgba(20,51,60,.25);padding:10px 14px 10px 10px;max-width:min(320px,calc(100% - 24px));opacity:0;transform:translateY(10px);transition:opacity .35s ease,transform .35s ease;pointer-events:none}
+.vv-info.vis{opacity:1;transform:none;pointer-events:auto}
+.vv-info img[hidden]{display:none}
+.vv-info img{width:64px;height:64px;object-fit:cover;border-radius:10px;flex-shrink:0}
+.vv-info .vi-tekst{font-size:13px;line-height:1.35;text-align:left;color:var(--blaek);padding-right:12px}
+.vv-info .vi-tekst strong{font-family:'Bricolage Grotesque';font-size:15px;display:block;margin-bottom:2px}
+.vv-info a{color:var(--aeble);font-weight:600;text-decoration:none;white-space:nowrap}
+.vv-info a:hover{text-decoration:underline}
+.vv-info .vi-luk{position:absolute;top:4px;right:8px;border:none;background:none;font-size:16px;color:var(--graa);cursor:pointer;padding:2px;line-height:1}
