@@ -46,7 +46,7 @@ nav.top{
 }
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
 .brand{font-family:'Bricolage Grotesque';font-weight:700;font-size:18px;letter-spacing:-.02em;text-decoration:none;white-space:nowrap}
-.brand span{color:var(--aeble)}
+.brand span{color:var(--tang)}
 .nav-links{display:flex;gap:26px;list-style:none;font-size:14px;font-weight:500}
 .nav-links a{text-decoration:none;opacity:.7;transition:opacity .15s;padding:4px 0;border-bottom:2px solid transparent}
 .nav-links a:hover,.nav-links a:focus-visible{opacity:1}
@@ -435,6 +435,7 @@ button.foto-tag{font-family:'IBM Plex Mono',monospace;cursor:pointer;border:none
 /* Footer */
 footer{background:var(--hav-dyb);color:rgba(232,240,236,.7);padding:64px 0 40px;font-size:14px}
 footer .brand{color:#fff;font-size:20px;display:block;margin-bottom:8px}
+footer .brand span{color:#AED98C}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:48px}
 footer h4{color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-family:'IBM Plex Mono';font-weight:500;margin-bottom:14px}
 footer ul{list-style:none}
