@@ -140,6 +140,7 @@ Interaktivt kort på **både sejlere.html (#vejviser) og turist.html (#kort)**: 
 - **Æble-blad på "o"-et i "roen"** — forsøgt to gange, kunne ikke se intentionelt ud i den størrelse. Droppet i enighed.
 - **Højrestillet hero-tekst** på forsiden — *"Nej tilbage igen."*
 - **Cremefarvet/mørk basis-palet** — *"lidt for mørkt/basic"*, de mørke baggrunde var *"mah"*. Derfor navy.
+- **Bornholm-agtig topbjælke** (skråt logofelt + farvet bjælke med store ikon-knapper, juli 2026) — *"Ingen af delene, syntes det ser rodet ud."* Prøvet i grøn og navy variant. Bemærk dog: ønsket bag den (store, ældre-venlige knapper) står stadig — måske via større forsidekort i stedet.
 - **Logomærke af øernes silhuetter + navy navigationsbjælke** (juli 2026) — *"Det er virkeligt dårligt det du har lavet der, bare drop det."* Forsøgt som tegnede ø-former (både frit abstraheret og tegnet efter luftfotoet), i segl-cirkel og set fra siden, kombineret med en navy bjælke og rød "Book færgen". Ingen af delene holdt. **Bemærk:** Lucas synes stadig, bjælken og ordmærket "Askø & Lilleø" er kedelige — problemet er ikke løst, men *det her* er ikke svaret. Prøv en anden vej end et tegnet mærke.
 
 ---
