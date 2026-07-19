@@ -46,7 +46,7 @@ nav.top{
 }
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
 .brand{font-family:'Bricolage Grotesque';font-weight:700;font-size:18px;letter-spacing:-.02em;text-decoration:none;white-space:nowrap}
-.brand span{color:var(--tang)}
+.brand span{color:#AED98C}
 .nav-links{display:flex;gap:26px;list-style:none;font-size:14px;font-weight:500}
 .nav-links a{text-decoration:none;opacity:.7;transition:opacity .15s;padding:4px 0;border-bottom:2px solid transparent}
 .nav-links a:hover,.nav-links a:focus-visible{opacity:1}
